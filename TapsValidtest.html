@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taps Validation (Structured)</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    margin: 20px;
+  }
+  .box {
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  .header {
+    font-weight: bold;
+    background-color: #e46868;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  .subheader {
+    background-color: #f2f2f2;
+    padding: 4px 8px;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  .highlight-yellow { background-color: #fff3a3; }
+  .highlight-green { background-color: #d6f5d6; }
+  .highlight-blue { background-color: #c2f0f7; }
+  .highlight-red { background-color: #f8b4b4; }
+
+  blockquote {
+    border-left: 4px solid #ccc;
+    margin: 10px 0;
+    padding-left: 10px;
+  }
+
+  /* --- FIXED FLEX LAYOUT --- */
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: nowrap; /* ensures side-by-side unless screen is too small */
+  }
+  .flex-item {
+    flex: 1 1 48%;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    min-width: 300px; /* ensures columns stay side by side on medium screens */
+    box-sizing: border-box;
+  }
+  .flex-item h4 {
+    margin-top: 0;
+  }
+
+  /* Responsive fallback for narrow screens */
+  @media (max-width: 700px) {
+    .flex-container {
+      flex-wrap: wrap;
+    }
+    .flex-item {
+      flex: 1 1 100%;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <div class="box">
+    <div class="header">TAPS VALIDATION – OPENING</div>
+    Hello! this is <b>(Your Full Name)</b> with the records department, paid to process your generous donation!
+    <br>
+    Thank you so much for supporting <b>(#list_description)</b>
+    <br>
+    I see here you want to donate a fantastic <b>(#province)</b>, is that amount definitely comfortable for you?
+    
+   <blockquote> <div class="subheader">IF A CUSTOMER INTERUPTS TO SAY THEY WILL MAIL IT:</div>
+    <blockquote class="highlight-yellow">
+      Completely understand (Sir/Ma'am)! I just wanted to first thank you for your generous donation and make sure the <b>(#province)</b> is definitely comfortable for you?
+    </blockquote></blockquote>
+
+    <div class="highlight-green"><b>Great! Thank you so much , your help is truly going to make a tremendous difference!</b></div>
+    
+    Do I have the pleasure of speaking with <b>(#name)</b>? My pleasure!
+  </div>
+
+  <div class="box">
+    <div class="header">CARD ASK</div>
+    <span style="background-color: #fff3a3; font-weight: bold; font-size: x-large;"> 
+        Which card would you like to use? I take both debit and credit, Visa, Mastercard, Discover, or American Express.
+    </span>
+    <br>
+
+    <!-- IF YES / IF NO side-by-side FIXED -->
+    <div class="flex-container">
+      <div class="flex-item highlight-green">
+        <h4>✅ IF YES — Proceed with Card</h4>
+        Great! Card number and expiration date whenever you are ready.
+        <br><br>
+        <span class="highlight-red">Always ask before processing:</span><br>
+        <span class="highlight-yellow">Are you authorizing <b>(#list_description)</b> to process your card in the amount of <b>(#amount)</b>?</span>
+        <br><br>
+        And is the address on file <b>(#address)</b> still correct? 
+        <span class="highlight-red">Make sure you have the correct apt or unit number.</span>
+        <br><br>
+        <span class="highlight-yellow">Don’t forget to ask for an upsale: <b>(#UPSALE)</b></span>
+      </div>
+
+      <div class="flex-item highlight-blue">
+        <h4>❌ IF NO — Go to Rebuttals</h4>
+        I completely understand. If we mail you a receipt, can the organization count on you to mail back a check or money order?
+        <br><br>
+        And is the address on file <b>(#address)</b> still correct?
+        <span class="highlight-red">Make sure you have the correct apt or unit number.</span>
+        <br><br>
+        And I always ask politely — can the <b>(#list_description)</b> count on you to immediately mail back your <b>(#amount)</b> donation as soon as you get this in the mail?
+        <blockquote>
+          <b>IF YES:</b> Thank you so much! Have a great day.<br><br>
+          <b>IF NO or not comfortable:</b> Drop donation level until the customer is comfortable.
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="header">AFTER CARD PROCESSING</div>
+
+    <div class="flex-container">
+      <div class="flex-item highlight-green">
+        <h4>✅ IF CARD IS PROCESSED</h4>
+        Your donation was successfully processed.  
+        Please look for your receipt and thank-you letter in the mail in the next few days.  
+        Thank you once again for your support — enjoy the rest of your day!
+      </div>
+      <div class="flex-item highlight-yellow">
+        <h4>⚠️ IF CARD DOES NOT PROCESS</h4>
+        My apologies, Sir/Ma'am — can you please read your card number again?<br><br>
+        <b>If it still doesn't process:</b><br>
+        It seems your card is not processing for some reason.  
+        Do you have another card you can use?<br><br>
+        <b>If no → Proceed with mail close.</b>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
