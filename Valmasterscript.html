@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validation Loader</title>
+  <script>
+    window.onload = function() {
+      const params = new URLSearchParams(window.location.search);
+      const groupRaw = params.get('group') || '';
+      const group = groupRaw.toUpperCase().trim();
+
+      // Base GitHub folder where your validation scripts are hosted
+      const baseURL = "https://crownscript.github.io/crown-scripts/validation/";
+
+      // Default script (if no match is found)
+      let targetFile = "TapValid.html";
+
+      // Determine which script to load based on group name
+      if (
+        group.includes("TAPS") ||
+        group.includes("MIXED PAC BIG SALES") ||
+        group.includes("MIXEDPACS SALES") ||
+        group.includes("MIXED POLICE AND FIRE SALES") ||
+        group.includes("MIXED POLICE AND FIRE BIG SALE")
+      ) {
+        targetFile = "TapValid.html";
+      } 
+      else if (
+        group.includes("XTAPC") ||
+        group.includes("MIXED CAMPAIGN 2 SALES") ||
+        group.includes("MIXED CAMPAIGN 2 BIG SALES")
+      ) {
+        targetFile = "XtapcValid.html";
+      } 
+      else if (
+        group.includes("NP") ||
+        group.includes("NON PAID SALES") ||
+        group.includes("NONPAIDSALES BIG")
+      ) {
+        targetFile = "NpValid.html";
+      }
+
+      // Preserve VICIdial variables (like name, city, etc.)
+      const queryString = window.location.search;
+
+      // Redirect inside the iframe
+      window.location.replace(baseURL + targetFile + queryString);
+    };
+  </script>
+</head>
+<body style="background-color:transparent;">
+  <p style="text-align:center; font-family:Arial; color:#555;">Loading validation script...</p>
+</body>
+</html>
