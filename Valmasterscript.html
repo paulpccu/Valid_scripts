@@ -1,60 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Validation Script Loader</title>
-  <script>
-    window.onload = function() {
-      const params = new URLSearchParams(window.location.search);
-      const groupRaw = params.get('group') || '';
-      const group = groupRaw.toUpperCase().trim();
+<script>
+window.onload = function() {
+  const params = new URLSearchParams(window.location.search);
+  const groupRaw = params.get('group') || '';
+  const commentsRaw = params.get('comments') || '';
+  const group = groupRaw.toUpperCase().trim();
+  const comments = commentsRaw.toLowerCase();
 
-      // 🔗 Your GitHub folder base path
-      const baseURL = "https://paulpccu.github.io/Valid_scripts/";
+  const baseURL = "https://paulpccu.github.io/Valid_scripts/";
+  let targetFile = "TapValidtest.html"; // Default fallback
 
-      // Default script (fallback)
-      let targetFile = "TapValidtest.html";
+  // 🔹 TAPS Logic 
+  if (
+    group.includes("TAPS") ||
+    group.includes("MIXED PAC BIG SALES") ||
+    group.includes("MIXED PACSBIGSALES") ||
+    group.includes("MIXEDPACSBIGSALES") ||
+    group.includes("MIXEDPACS SALES") ||
+    group.includes("MIXEDPACSSALES") ||
+    group.includes("MIXEDPOLICEANDFSALES") ||
+    group.includes("MIXEDPANDFBIGSALES")
+  ) {
+    //  Check for the word "credit" in the comments
+    if (comments.includes("credit")) {
+      // Customer used a card before → load special rebuttal version
+      targetFile = "TapValid_Credit.html";
+    } else {
+      // Regular TAPS script
+      targetFile = "TapValid.html";
+    }
+  }
 
-      // Determine which script to load
-      if (
-        group.includes("TAPS") ||
-        group.includes("MIXED PAC BIG SALES") ||
-        group.includes("MIXED PACSBIGSALES") ||
-        group.includes("MIXEDPACSBIGSALES") ||
-        group.includes("MIXEDPACS SALES") ||
-        group.includes("MIXEDPACSSALES") ||
-        group.includes("MIXEDPOLICEANDFSALES") ||
-        group.includes("MIXEDPANDFBIGSALES")
-      ) {
-        targetFile = "TapValid.html";
-      } 
-      else if (
-        group.includes("XTAPC") ||
-        group.includes("MIXED CAMPAIGN 2 SALES") ||
-        group.includes("MIXEDCAMPAIGN2SALES") ||
-        group.includes("MIXEDPACS2SALES") ||
-        group.includes("MIXEDCAMP2BIGSALES")
-      ) {
-        targetFile = "XtapcValid.html";
-      } 
-      else if (
-        group.includes("NP") ||
-        group.includes("NON PAID SALES") ||
-        group.includes("NONPAIDSALES BIG")
-      ) {
-        targetFile = "NpValid.html";
-      }
+  // 🔹 XTAPC Logic
+  else if (
+    group.includes("XTAPC") ||
+    group.includes("MIXED CAMPAIGN 2 SALES") ||
+    group.includes("MIXEDCAMPAIGN2SALES") ||
+    group.includes("MIXEDPACS2SALES") ||
+    group.includes("MIXEDCAMP2BIGSALES")
+  ) {
+    targetFile = "XtapcValid.html";
+  }
 
-      // Preserve VICIdial variables (first_name, city, etc.)
-      const queryString = window.location.search;
+  // 🔹 NP Logic
+  else if (
+    group.includes("NP") ||
+    group.includes("NON PAID SALES") ||
+    group.includes("NONPAIDSALES BIG")
+  ) {
+    targetFile = "NpValid.html";
+  }
 
-      // Redirect inside iframe to the correct HTML file
-      window.location.replace(baseURL + targetFile + queryString);
-    };
-  </script>
-</head>
-<body style="background-color:transparent;">
-  <p style="text-align:center; font-family:Arial; color:#444;">Loading validation script...</p>
-</body>
-</html>
+  // Preserve VICIdial parameters
+  const queryString = window.location.search;
+
+  // Redirect inside iframe
+  window.location.replace(baseURL + targetFile + queryString);
+};
+</script>
