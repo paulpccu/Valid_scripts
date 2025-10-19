@@ -1,65 +1,84 @@
-<script>
-window.onload = function() {
-  const params = new URLSearchParams(window.location.search);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validation Script Loader</title>
+  <script>
+    window.onload = function() {
+      const params = new URLSearchParams(window.location.search);
 
-  // Read both group sources (transfer calls often populate user_group)
-  const groupRaw     = params.get('group') || '';
-  const userGroupRaw = params.get('user_group') || '';
-  const commentsRaw  = params.get('comments') || '';
+      // Capture all VICIdial variables
+      const groupRaw     = params.get('group') || '';
+      const userGroupRaw = params.get('user_group') || '';
+      const commentsRaw  = params.get('comments') || '';
 
-  const group     = groupRaw.toUpperCase().trim();
-  const userGroup = userGroupRaw.toUpperCase().trim();
-  const comments  = commentsRaw.toLowerCase();
+      const group     = groupRaw.toUpperCase().trim();
+      const userGroup = userGroupRaw.toUpperCase().trim();
+      const comments  = commentsRaw.toLowerCase();
 
-  const baseURL = "https://paulpccu.github.io/Valid_scripts/";
-  let targetFile = "TapValidtest.html"; // fallback
+      const baseURL = "https://paulpccu.github.io/Valid_scripts/";
+      let targetFile = ""; // no fallback
 
-  // Helper: test if ANY of the group-like fields matches a condition
-  const anyGroup = (predicate) => [group, userGroup].some(g => predicate(g));
+      // Helper: check both group and user_group
+      const anyGroup = (predicate) => [group, userGroup].some(g => predicate(g));
 
-  // ---- TAPS logic (interactive rebuttal only here) ----
-  const isTaps = anyGroup(g =>
-    g.includes("TAPS") ||
-    g.includes("MIXED PAC BIG SALES") ||
-    g.includes("MIXED PACSBIGSALES") ||
-    g.includes("MIXEDPACSBIGSALES") ||
-    g.includes("MIXEDPACS SALES") ||
-    g.includes("MIXEDPACSSALES") ||
-    g.includes("MIXEDPOLICEANDFSALES") ||
-    g.includes("MIXEDPANDFBIGSALES")
-  );
+      // ---- TAPS logic (interactive rebuttal only here) ----
+      const isTaps = anyGroup(g =>
+        g.includes("TAPS") ||
+        g.includes("MIXED PAC BIG SALES") ||
+        g.includes("MIXED PACSBIGSALES") ||
+        g.includes("MIXEDPACSBIGSALES") ||
+        g.includes("MIXEDPACS SALES") ||
+        g.includes("MIXEDPACSSALES") ||
+        g.includes("MIXEDPOLICEANDFSALES") ||
+        g.includes("MIXEDPANDFBIGSALES")
+      );
 
-  if (isTaps) {
-    // Only TAPS gets the interactive credit-based split
-    targetFile = comments.includes("credit")
-      ? "TapValid_Credit.html"
-      : "TapValid.html";
-  }
+      if (isTaps) {
+        targetFile = comments.includes("credit")
+          ? "TapValid_Credit.html"
+          : "TapValid.html";
+      }
 
-  // ---- XTAPC logic ----
-  else if (anyGroup(g =>
-    g.includes("XTAPC") ||
-    g.includes("MIXED CAMPAIGN 2 SALES") ||
-    g.includes("MIXEDCAMPAIGN2SALES") ||
-    g.includes("MIXEDPACS2SALES") ||
-    g.includes("MIXEDCAMP2BIGSALES")
-  )) {
-    targetFile = "XtapcValid.html";
-  }
+      // ---- XTAPC logic ----
+      else if (anyGroup(g =>
+        g.includes("XTAPC") ||
+        g.includes("MIXED CAMPAIGN 2 SALES") ||
+        g.includes("MIXEDCAMPAIGN2SALES") ||
+        g.includes("MIXEDPACS2SALES") ||
+        g.includes("MIXEDCAMP2BIGSALES")
+      )) {
+        targetFile = "XtapcValid.html";
+      }
 
-  // ---- NP logic ----
-  else if (anyGroup(g =>
-    g.includes("NP") ||
-    g.includes("NON PAID SALES") ||
-    g.includes("NONPAIDSALES BIG")
-  )) {
-    targetFile = "NpValid.html";
-  }
+      // ---- NP logic ----
+      else if (anyGroup(g =>
+        g.includes("NP") ||
+        g.includes("NON PAID SALES") ||
+        g.includes("NONPAIDSALES BIG")
+      )) {
+        targetFile = "NpValid.html";
+      }
 
-  // Preserve all VICIdial params (first_name, city, etc.)
-  const queryString = window.location.search;
+      // If no match, don’t redirect — just show an error message
+      if (!targetFile) {
+        document.body.innerHTML =
+          "<p style='text-align:center; color:red; font-weight:bold;'>No matching validation script found for this group.</p>";
+        return;
+      }
 
-  // Redirect inside the iframe
-  window.location.replace(baseURL + targetFile + queryString);
-};
-</script>
+      // Preserve VICIdial variables
+      const queryString = window.location.search;
+
+      // Redirect inside the iframe
+      window.location.replace(baseURL + targetFile + queryString);
+    };
+  </script>
+</head>
+<body style="background-color:transparent;">
+  <p style="text-align:center; font-family:Arial; color:#444;">
+    Loading validation script...
+  </p>
+</body>
+</html>
