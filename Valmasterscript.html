@@ -1,59 +1,65 @@
 <script>
 window.onload = function() {
   const params = new URLSearchParams(window.location.search);
-  const groupRaw = params.get('group') || '';
-  const commentsRaw = params.get('comments') || '';
-  const group = groupRaw.toUpperCase().trim();
-  const comments = commentsRaw.toLowerCase();
+
+  // Read both group sources (transfer calls often populate user_group)
+  const groupRaw     = params.get('group') || '';
+  const userGroupRaw = params.get('user_group') || '';
+  const commentsRaw  = params.get('comments') || '';
+
+  const group     = groupRaw.toUpperCase().trim();
+  const userGroup = userGroupRaw.toUpperCase().trim();
+  const comments  = commentsRaw.toLowerCase();
 
   const baseURL = "https://paulpccu.github.io/Valid_scripts/";
-  let targetFile = "TapValidtest.html"; // Default fallback
+  let targetFile = "TapValidtest.html"; // fallback
 
-  // 🔹 TAPS Logic 
-  if (
-    group.includes("TAPS") ||
-    group.includes("MIXED PAC BIG SALES") ||
-    group.includes("MIXED PACSBIGSALES") ||
-    group.includes("MIXEDPACSBIGSALES") ||
-    group.includes("MIXEDPACS SALES") ||
-    group.includes("MIXEDPACSSALES") ||
-    group.includes("MIXEDPOLICEANDFSALES") ||
-    group.includes("MIXEDPANDFBIGSALES")
-  ) {
-    //  Check for the word "credit" in the comments
-    if (comments.includes("credit")) {
-      // Customer used a card before → load special rebuttal version
-      targetFile = "TapValid_Credit.html";
-    } else {
-      // Regular TAPS script
-      targetFile = "TapValid.html";
-    }
+  // Helper: test if ANY of the group-like fields matches a condition
+  const anyGroup = (predicate) => [group, userGroup].some(g => predicate(g));
+
+  // ---- TAPS logic (interactive rebuttal only here) ----
+  const isTaps = anyGroup(g =>
+    g.includes("TAPS") ||
+    g.includes("MIXED PAC BIG SALES") ||
+    g.includes("MIXED PACSBIGSALES") ||
+    g.includes("MIXEDPACSBIGSALES") ||
+    g.includes("MIXEDPACS SALES") ||
+    g.includes("MIXEDPACSSALES") ||
+    g.includes("MIXEDPOLICEANDFSALES") ||
+    g.includes("MIXEDPANDFBIGSALES")
+  );
+
+  if (isTaps) {
+    // Only TAPS gets the interactive credit-based split
+    targetFile = comments.includes("credit")
+      ? "TapValid_Credit.html"
+      : "TapValid.html";
   }
 
-  // 🔹 XTAPC Logic
-  else if (
-    group.includes("XTAPC") ||
-    group.includes("MIXED CAMPAIGN 2 SALES") ||
-    group.includes("MIXEDCAMPAIGN2SALES") ||
-    group.includes("MIXEDPACS2SALES") ||
-    group.includes("MIXEDCAMP2BIGSALES")
-  ) {
+  // ---- XTAPC logic ----
+  else if (anyGroup(g =>
+    g.includes("XTAPC") ||
+    g.includes("MIXED CAMPAIGN 2 SALES") ||
+    g.includes("MIXEDCAMPAIGN2SALES") ||
+    g.includes("MIXEDPACS2SALES") ||
+    g.includes("MIXEDCAMP2BIGSALES")
+  )) {
     targetFile = "XtapcValid.html";
   }
 
-  // 🔹 NP Logic
-  else if (
-    group.includes("NP") ||
-    group.includes("NON PAID SALES") ||
-    group.includes("NONPAIDSALES BIG")
-  ) {
+  // ---- NP logic ----
+  else if (anyGroup(g =>
+    g.includes("NP") ||
+    g.includes("NON PAID SALES") ||
+    g.includes("NONPAIDSALES BIG")
+  )) {
     targetFile = "NpValid.html";
   }
 
-  // Preserve VICIdial parameters
+  // Preserve all VICIdial params (first_name, city, etc.)
   const queryString = window.location.search;
 
-  // Redirect inside iframe
+  // Redirect inside the iframe
   window.location.replace(baseURL + targetFile + queryString);
 };
 </script>
