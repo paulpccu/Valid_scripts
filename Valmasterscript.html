@@ -1,84 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Validation Script Loader</title>
-  <script>
-    window.onload = function() {
-      const params = new URLSearchParams(window.location.search);
+<script>
+window.onload = function() {
+  const params = new URLSearchParams(window.location.search);
+  const groupRaw = params.get('group') || '';
+  const commentsRaw = params.get('comments') || '';
+  const group = groupRaw.toUpperCase().trim();
+  const comments = commentsRaw.toLowerCase();
 
-      // Capture all VICIdial variables
-      const groupRaw     = params.get('group') || '';
-      const userGroupRaw = params.get('user_group') || '';
-      const commentsRaw  = params.get('comments') || '';
+  const baseURL = "https://paulpccu.github.io/Valid_scripts/";
+  let targetFile = "TapValidtest.html"; // Default fallback
 
-      const group     = groupRaw.toUpperCase().trim();
-      const userGroup = userGroupRaw.toUpperCase().trim();
-      const comments  = commentsRaw.toLowerCase();
+  // 🔹 TAPS Logic 
+  if (
+    group.includes("TAPS") ||
+    group.includes("MIXED PAC BIG SALES") ||
+    group.includes("MIXED PACSBIGSALES") ||
+    group.includes("MIXEDPACSBIGSALES") ||
+    group.includes("MIXEDPACS SALES") ||
+    group.includes("MIXEDPACSSALES") ||
+    group.includes("MIXEDPOLICEANDFSALES") ||
+    group.includes("MIXEDPANDFBIGSALES")
+  ) {
+    //  Check for the word "credit" in the comments
+    if (comments.includes("credit")) {
+      // Customer used a card before → load special rebuttal version
+      targetFile = "TapValid_Credit.html";
+    } else {
+      // Regular TAPS script
+      targetFile = "TapValid.html";
+    }
+  }
 
-      const baseURL = "https://paulpccu.github.io/Valid_scripts/";
-      let targetFile = ""; // no fallback
+  // 🔹 XTAPC Logic
+  else if (
+    group.includes("XTAPC") ||
+    group.includes("MIXED CAMPAIGN 2 SALES") ||
+    group.includes("MIXEDCAMPAIGN2SALES") ||
+    group.includes("MIXEDPACS2SALES") ||
+    group.includes("MIXEDCAMP2BIGSALES")
+  ) {
+    targetFile = "XtapcValid.html";
+  }
 
-      // Helper: check both group and user_group
-      const anyGroup = (predicate) => [group, userGroup].some(g => predicate(g));
+  // 🔹 NP Logic
+  else if (
+    group.includes("NP") ||
+    group.includes("NON PAID SALES") ||
+    group.includes("NONPAIDSALES BIG")
+  ) {
+    targetFile = "NpValid.html";
+  }
 
-      // ---- TAPS logic (interactive rebuttal only here) ----
-      const isTaps = anyGroup(g =>
-        g.includes("TAPS") ||
-        g.includes("MIXED PAC BIG SALES") ||
-        g.includes("MIXED PACSBIGSALES") ||
-        g.includes("MIXEDPACSBIGSALES") ||
-        g.includes("MIXEDPACS SALES") ||
-        g.includes("MIXEDPACSSALES") ||
-        g.includes("MIXEDPOLICEANDFSALES") ||
-        g.includes("MIXEDPANDFBIGSALES")
-      );
+  // Preserve VICIdial parameters
+  const queryString = window.location.search;
 
-      if (isTaps) {
-        targetFile = comments.includes("credit")
-          ? "TapValid_Credit.html"
-          : "TapValid.html";
-      }
+  // Redirect inside iframe
+  window.location.replace(baseURL + targetFile + queryString);
+};
+</script>
 
-      // ---- XTAPC logic ----
-      else if (anyGroup(g =>
-        g.includes("XTAPC") ||
-        g.includes("MIXED CAMPAIGN 2 SALES") ||
-        g.includes("MIXEDCAMPAIGN2SALES") ||
-        g.includes("MIXEDPACS2SALES") ||
-        g.includes("MIXEDCAMP2BIGSALES")
-      )) {
-        targetFile = "XtapcValid.html";
-      }
-
-      // ---- NP logic ----
-      else if (anyGroup(g =>
-        g.includes("NP") ||
-        g.includes("NON PAID SALES") ||
-        g.includes("NONPAIDSALES BIG")
-      )) {
-        targetFile = "NpValid.html";
-      }
-
-      // If no match, don’t redirect — just show an error message
-      if (!targetFile) {
-        document.body.innerHTML =
-          "<p style='text-align:center; color:red; font-weight:bold;'>No matching validation script found for this group.</p>";
-        return;
-      }
-
-      // Preserve VICIdial variables
-      const queryString = window.location.search;
-
-      // Redirect inside the iframe
-      window.location.replace(baseURL + targetFile + queryString);
-    };
-  </script>
-</head>
-<body style="background-color:transparent;">
-  <p style="text-align:center; font-family:Arial; color:#444;">
-    Loading validation script...
-  </p>
-</body>
-</html>
