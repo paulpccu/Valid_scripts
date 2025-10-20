@@ -98,12 +98,61 @@
     <span style="background-color: #fff3a3; font-weight: bold; font-size: large;"> 
         Which card would you like to use? I take both debit and credit, Visa, Mastercard, Discover, or American Express.
     </span>
+    <div class="subheader">Response Options</div>
+<p>
+  <a href="#if-yes" style="font-weight:bold; color:green; text-decoration:none;">If Yes → Go to Card Processing Section</a><br>
+  If No → Proceed with rebuttals below
+</p>
     <br>
+<!-- ===== STANDARD REBUTTALS SECTION ===== -->
+<div class="box">
+  <div class="header">PREVIOUS CREDIT REBUTTALS</div>
 
+  <div class="flex-container">
+    <div class="flex-item highlight-yellow">
+      <h4 style="color: darkred; text-align:center;">BASIC REBUTTAL</h4>
+      <p><em>(Donor simply says no, gives no reason or any reason not mentioned below)</em></p>
+      <blockquote>
+      I completely understand. It does show here you've previously used a card, We just ask everyone to use a card because it's a faster
+       and more cost effective way to accept donations for the 
+      <b>(VETERANS/FIREFIGHTERS/OFFICERS)</b> and your donation can go to work immediately.
+      <br><br>
+     <b> Can you use a card just one time?</b>
+      </blockquote>
+    </div>
+
+    <div class="flex-item highlight-blue">
+      <h4 style="color: darkred; text-align:center;">SAFETY REBUTTAL</h4>
+      <p><em>(To use when a customer says they are not comfortable using a card for safety reasons — had their number stolen, doesn’t feel safe giving it on the phone, does not trust it, etc.)</em></p>
+      <blockquote>
+      I completely understand, please keep in mind you've used a card previously, as you may remember we would never take the 
+      security code off the back of the card and that’s done for your safety.
+    
+      Also, your information is never stored and this charge would show up as <b>(LISTDESCRIPTION)</b> so you know exactly who you're giving to.
+  
+      That being said, would you be able to use your card to assist the <b>(officers/veterans/firefighters)</b> just this one time?
+      </blockquote>
+    </div>
+  </div>
+
+  <div class="flex-container">
+    <div class="flex-item highlight-green">
+      <h4 style="color: darkred; text-align:center;">WANTS MAIL REBUTTAL</h4>
+      <p><em>(Use when a customer says they want something in the mail only)</em></p>
+      <blockquote>
+        Well you did use a card previously, and would still of course receive your receipt in the mail even if you use your card, 
+      along with the thank you letter from the organization.
+      By using a card it will help provide immediate help to the <b>(VETERANS/FIREFIGHTERS/OFFICERS)</b>.
+      <br><br>
+      <b>So can they count on you to make your donation now, just this one time?</b>
+      </blockquote>
+    </div>
+  </div>
+</div>
 
     <div class="flex-container">
       <div class="flex-item highlight-green">
-        <h4>✅ IF YES — Proceed with Card</h4>
+        <h4 id="if-yes"> ✅ IF YES — Proceed with Card</h4>
         Great! Card number and expiration date whenever you are ready.
         <br><br>
         <span class="highlight-red">Always ask before processing:</span><br>
@@ -112,7 +161,9 @@
         And is the address on file <b>(#address)</b> still correct? 
         <span class="highlight-red">Make sure you have the correct apt or unit number.</span>
         <br><br>
-        <span class="highlight-yellow">Don’t forget to ask for an upsale: <b>(#UPSALE)</b></span>
+          <span class="highlight-yellow">
+    Don’t forget to ask for an upsale: <b><span id="upsale-text">(#UPSALE)</span></b>
+  </span>
       </div>
 
       <div class="flex-item highlight-blue">
@@ -151,47 +202,30 @@
       </div>
     </div>
   </div>
-<!-- ===== STANDARD REBUTTALS SECTION ===== -->
-<div class="box">
-  <div class="header">STANDARD REBUTTALS</div>
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const amount = parseFloat(params.get("amount")) || 0;
 
-  <div class="flex-container">
-    <div class="flex-item highlight-yellow">
-      <h4 style="color: darkred; text-align:center;">BASIC REBUTTAL</h4>
-      <p><em>(Donor simply says no, gives no reason or any reason not mentioned below)</em></p>
-      <blockquote>
-        I completely understand. We just ask everyone to use a card because it is a faster and more cost effective way to accept donations for the 
-        <b>(VETERANS/FIREFIGHTERS/OFFICERS)</b> and your donation can go to work immediately.
-        <br><br>
-        <b>Can you use a card just one time for the drive?</b>
-      </blockquote>
-    </div>
+  let upsaleText = "";
 
-    <div class="flex-item highlight-blue">
-      <h4 style="color: darkred; text-align:center;">SAFETY REBUTTAL</h4>
-      <p><em>(To use when a customer says they are not comfortable using a card for safety reasons — had their number stolen, doesn’t feel safe giving it on the phone, does not trust it, etc.)</em></p>
-      <blockquote>
-        I completely understand, please keep in mind we would never take the security code off the back of the card and that’s done for your safety.  
-        Also, your information is never stored and this charge would show up as the <b>(LISTDESCRIPTION)</b> so you know exactly who you're giving to.  
-        <br><br>
-        That being said, would you be able to use your card to assist the <b>(officers/veterans/firefighters)</b> just this one time?
-      </blockquote>
-    </div>
-  </div>
+  if (amount > 0 && amount <= 25) {
+    upsaleText = `I see you are generously contributing our patron booster of $${province}. This year we are asking residents that have the ability if they can comfortably add $5 dollars to their pledge to defray the cost of phone calls and mailings. Bringing your total up to an even amount of $${province + 5}. Can the association count on you for one of those pledges. Just one time for the drive?`;
+  } else if (amount <= 50) {
+    upsaleText = `AND I see you are generously contributing our patron level booster of $${province} . This year we are asking residents that have the ability if they can comfortably add $5 or $10 dollars to their pledge to defray the cost of the calls and mailings. Bringing your total up to an even $${province + 5} or $${province + 10}. Can the association count on you for one of those pledges. Just one time for the drive?`;
+  } else if (amount <= 90) {
+    upsaleText = `AND I see you are generously contributing our booster of $${province}. This year we are asking residents that have the ability if they can comfortably add $15 or $20 dollars to their pledge to defray the cost of the calls and mailings. Bringing your total up to an even $${province + 15} or $${province + 20}. Can the association count on you for one of those pledges. Just one time for the drive?`;
+  } else if (amount <= 105){
+    upsaleText = "a small extra boost — whatever you’re comfortable with!";
+  } else {
+    upsaleText ="test"
+  }
 
-  <div class="flex-container">
-    <div class="flex-item highlight-green">
-      <h4 style="color: darkred; text-align:center;">WANTS MAIL REBUTTAL</h4>
-      <p><em>(Use when a customer says they want something in the mail only)</em></p>
-      <blockquote>
-        Well, you would still of course receive your receipt in the mail even if you use your card, along with the thank you letter from the organization.  
-        By using a card it will help provide immediate help to the <b>(VETERANS/FIREFIGHTERS/OFFICERS)</b>.  
-        <br><br>
-        <b>So can they count on you to make your donation now, just this one time?</b>
-      </blockquote>
-    </div>
-  </div>
-</div>
+  // Inject into the specific upsale span
+  const upsaleElement = document.getElementById("upsale-text");
+  if (upsaleElement) upsaleElement.textContent = upsaleText;
+});
+</script>
 
 </body>
 </html>

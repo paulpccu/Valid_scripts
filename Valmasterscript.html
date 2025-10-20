@@ -3,6 +3,8 @@ window.onload = function() {
   const params = new URLSearchParams(window.location.search);
   const groupRaw = params.get('group') || '';
   const commentsRaw = params.get('comments') || '';
+  const provinceRaw = params.get('province') || '';
+  const province = parseFloat(provinceRaw) || 0;
   const group = groupRaw.toUpperCase().trim();
   const comments = commentsRaw.toLowerCase();
 
