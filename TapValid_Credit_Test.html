@@ -205,17 +205,17 @@
 <script>
 window.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
-  const amount = parseFloat(params.get("amount")) || 0;
+  const amount = parseFloat(params.get("province")) || 0;
 
   let upsaleText = "";
 
-  if (amount > 0 && amount <= 25) {
+  if (amount > 0 && province <= 25) {
     upsaleText = `I see you are generously contributing our patron booster of $${province}. This year we are asking residents that have the ability if they can comfortably add $5 dollars to their pledge to defray the cost of phone calls and mailings. Bringing your total up to an even amount of $${province + 5}. Can the association count on you for one of those pledges. Just one time for the drive?`;
-  } else if (amount <= 50) {
+  } else if (province <= 50) {
     upsaleText = `AND I see you are generously contributing our patron level booster of $${province} . This year we are asking residents that have the ability if they can comfortably add $5 or $10 dollars to their pledge to defray the cost of the calls and mailings. Bringing your total up to an even $${province + 5} or $${province + 10}. Can the association count on you for one of those pledges. Just one time for the drive?`;
-  } else if (amount <= 90) {
+  } else if (province <= 90) {
     upsaleText = `AND I see you are generously contributing our booster of $${province}. This year we are asking residents that have the ability if they can comfortably add $15 or $20 dollars to their pledge to defray the cost of the calls and mailings. Bringing your total up to an even $${province + 15} or $${province + 20}. Can the association count on you for one of those pledges. Just one time for the drive?`;
-  } else if (amount <= 105){
+  } else if (province <= 105){
     upsaleText = "a small extra boost — whatever you’re comfortable with!";
   } else {
     upsaleText ="test"
