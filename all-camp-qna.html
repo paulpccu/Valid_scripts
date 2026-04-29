@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Campaign Q&A</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: #111;
+      background: #fffaf4;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.35;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #1f2933;
+      color: white;
+      padding: 12px 18px;
+      border-bottom: 4px solid #c41f1f;
+    }
+    header h1 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      letter-spacing: 0;
+    }
+    nav {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 6px;
+      max-height: 210px;
+      overflow: auto;
+      padding-right: 4px;
+    }
+    nav a {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      color: white;
+      text-decoration: none;
+      background: rgba(255,255,255,.11);
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 4px;
+      padding: 5px 7px;
+      font-size: 12px;
+    }
+    nav small { color: #d7dee7; white-space: nowrap; }
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 18px;
+    }
+    .category > h1 {
+      margin: 26px 0 12px;
+      padding-bottom: 5px;
+      border-bottom: 3px solid #c41f1f;
+      font-size: 24px;
+    }
+    .camp {
+      margin: 0 0 22px;
+      padding: 14px 16px;
+      background: white;
+      border: 1px solid #d6d6d6;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0,0,0,.08);
+    }
+    .camp-heading {
+      margin: -14px -16px 12px;
+      padding: 10px 14px;
+      background: #f2f5f7;
+      border-bottom: 1px solid #d6d6d6;
+    }
+    .camp-heading h2 {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: 0;
+    }
+    .camp-heading p {
+      margin: 4px 0 0;
+      color: #555;
+      font-size: 12px;
+    }
+    .qna { font-size: 15px; }
+    .qna p { margin: 10px 0; }
+    .qna strong { font-weight: 700; }
+    .qna u { text-decoration-thickness: 1px; }
+    @media print {
+      header { position: static; }
+      nav { display: none; }
+      main { max-width: none; padding: 0; }
+      .camp { break-inside: avoid; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>All Campaign Q&A</h1>
+    <nav>
+      <a href="#afc"><span>AMERICAN FIREFIGHTERS COALITION PAC</span><small>Firefighters</small></a>
+      <a href="#cpft"><span>COMMITTEE FOR PARAMEDICS AND FIREFIGHTERS PAC</span><small>Firefighters</small></a>
+      <a href="#fcf"><span>FIREFIGHTERS CHARITABLE FOUNDATION</span><small>Firefighters</small></a>
+      <a href="#ffsa"><span>FIREFIGHTERS SUPPORT ALLIANCE</span><small>Firefighters</small></a>
+      <a href="#ncvf"><span>NATIONAL COMMITTEE FOR VOLUNTEER FIREFIGHTERS PAC</span><small>Firefighters</small></a>
+      <a href="#vfa"><span>VOLUNTEER FIREFIGHTERS ALLIANCE</span><small>Firefighters</small></a>
+      <a href="#acps"><span>COALITION FOR POLICE AND SHERIFFS PAC</span><small>Police</small></a>
+      <a href="#cpod"><span>COMMITTEE FOR POLICE OFFICERS DEFENSE</span><small>Police</small></a>
+      <a href="#dare"><span>DARE DRUG ABUSE RESISTANCE EDUCATION</span><small>Police</small></a>
+      <a href="#flpta"><span>FLORIDA POLICE AND TROOPERS ASSOCIATION</span><small>Police</small></a>
+      <a href="#lead"><span>LAW ENFORCEMENT AGAINST DRUGS</span><small>Police</small></a>
+      <a href="#mifpac"><span>MICHIGAN FRATERNAL ORDER OF POLICE FUND</span><small>Police</small></a>
+      <a href="#nerc"><span>NATIONAL EMERGENCY RESPONDERS COALITION</span><small>Police</small></a>
+      <a href="#nfof"><span>NATIONAL FALLEN OFFICER FOUNDATION</span><small>Police</small></a>
+      <a href="#npsf"><span>NATIONAL POLICE SUPPORT FUND</span><small>Police</small></a>
+      <a href="#njpof"><span>NEW JERSEY POLICE OFFICERS FOUNDATION</span><small>Police</small></a>
+      <a href="#pnoa"><span>PENNSYLVANIA NARCOTICS OFFICERS ASSOCIATION</span><small>Police</small></a>
+      <a href="#pssa"><span>POLICE AND SHERIFFS SUPPORT ALLIANCE PAC</span><small>Police</small></a>
+      <a href="#ptrf"><span>POLICE AND TROOPERS RELIEF FOUNDATION</span><small>Police</small></a>
+      <a href="#poac"><span>POLICE OFFICERS ALLIANCE PAC</span><small>Police</small></a>
+      <a href="#posa"><span>POLICE OFFICERS SUPPORT ASSOCIATION PAC</span><small>Police</small></a>
+      <a href="#txcops"><span>TEXAS COALITION OF POLICE AND SHERIFFS</span><small>Police</small></a>
+      <a href="#txfof"><span>TEXAS FALLEN OFFICER FOUNDATION</span><small>Police</small></a>
+      <a href="#pava"><span>THE POLICE ASSOCIATION OF VIRGINIA</span><small>Police</small></a>
+      <a href="#pcny"><span>THE POLICE CONFERENCE OF NEW YORK</span><small>Police</small></a>
+      <a href="#nyamvets"><span>AMERICAN VETERANS DEPARTMENT OF NEW YORK</span><small>Veterans</small></a>
+      <a href="#avsc"><span>AMERICAN VETERANS SUPPORT COMMITTEE PAC</span><small>Veterans</small></a>
+      <a href="#hscdipac"><span>HANDICAPPED VETERANS SERVICE INITIATIVE PAC</span><small>Veterans</small></a>
+      <a href="#ncdv"><span>NATIONAL COALITION FOR DISABLED VETERANS PAC</span><small>Veterans</small></a>
+      <a href="#unvet"><span>THE UNITED VETERANS OF AMERICA PAC</span><small>Veterans</small></a>
+      <a href="#vaf"><span>VETERANS ASSISTANCE ACTION FUND PAC</span><small>Veterans</small></a>
+      <a href="#vaa"><span>VETERANS ASSOCIATION OF AMERICA</span><small>Veterans</small></a>
+    </nav>
+  </header>
+  <main>
+
+    <section class="category" id="firefighters">
+      <h1>Firefighters</h1>
+      <article class="camp" id="afc">
+        <div class="camp-heading">
+          <h2>AMERICAN FIREFIGHTERS COALITION PAC</h2>
+          <p>Source: afct4t.html | Variants checked: afct4t.html, afct4tinbound.html, afcxtap.html, afcxtapinbound.html</p>
+        </div>
+        <div class="qna">
+<p><strong>QUESTION: IF A QUESTION IS NOT ON HERE?</strong><br />
+        RESPONSE: PLEASE REFER THE CONSUMER TO THE CORRESPONDING "800" NUMBER:18338170737 </p>
+
+        <p><strong> THE AMERICAN FIREFIGHTERS COALITION PAC</strong><br />
+        RESPONSE: AMERICAN FIREFIGHTERS COALITION PAC IS A POLITICAL ORGANIZATION THAT PUSHES TO IMPROVE THE WORKING CONDITIONS OF OUR VOLUNTEER FIREFIGHTERS AND PROMOTES LAWS TO PROVIDE FUNDING FOR VOLUNTEER FIRE DEPARTMENTS.  </p>
+
+        <p><strong>QUESTION: ARE YOU A MEMBER OF THE ORGANIZATION?</strong><br />
+        RESPONSE:NO, I WORK FOR A PROFESSIONAL FUNDRAISING COMPANY WHICH HAS BEEN CONTRACTED BY THE PAC.</p>
+
+        <p><strong>QUESTION: WHAT IS THE TAX STATUS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: CONTRIBUTIONS AND DONATIONS TO AMERICAN FIREFIGHTERS COALITION PAC ARE NOT CHARITABLE CONTRIBUTIONS AND ARE NOT DEDUCTIBLE AS CHARITABLE CONTRIBUTIONS FOR STATE AND FEDERAL INCOME TAX PURPOSES.</p>
+
+        <p><strong>QUESTION: WHERE IS THE ORGANIZATION LOCATED?</strong><br />
+        RESPONSE: AMERICAN FIREFIGHTERS COALITION PAC IS LOCATED IN ARLINGTON, VIRGINIA</p>
+
+        <p><strong>QUESTION: DO THEY HAVE A WEBSITE?</strong><br />
+        RESPONSE: YOU CAN VISIT AMERICAN FIREFIGHTERS COALITION PAC ON THE WEB AT www.americanfirefighterspac.org</p>
+
+        <p><strong>QUESTION: HOW MUCH GOES TO THE ORGANIZATION?</strong><br />
+        RESPONSE: THERE IS NO SET PERCENTAGE.  THERE ARE SUBSTANTIAL FUNDRAISING EXPENSES, PROCESSING FEES, AND NORMAL FEC COMPLIANCE EXPENSES.  BUT THE PLAN IS TO HAVE ENOUGH FUNDS LEFT OVER TO SUPPORT THE CANDIDATES WHO WILL TRULY HELP THE CAUSE.</p>
+
+        <p><strong>QUESTION: DOES THIS HELP OUT LOCALLY?</strong><br />
+        RESPONSE:THIS IS A NATIONAL DRIVE.</p>
+
+        <p><strong>QUESTION: WHO DO YOU WORK FOR?</strong><br />
+        RESPONSE:I WORK FOR A PROFESSIONAL FUNDRAISING COMPANY HIRED BY THE PAC TO CONDUCT THIS DONOR AWARENESS APPEAL.</p>
+        </div>
+      </article>
+      <article class="camp" id="cpft">
+        <div class="camp-heading">
+          <h2>COMMITTEE FOR PARAMEDICS AND FIREFIGHTERS PAC</h2>
+          <p>Source: cpftt4t.html | Variants checked: cpftt4t.html, cpftt4tinbound.html, cpftxtap.html, cpftxtapinbound.html</p>
+        </div>
+        <div class="qna">
+<p><strong>QUESTION: IF A QUESTION IS NOT ON HERE?</strong><br />
+        RESPONSE: PLEASE REFER THE CONSUMER TO THE CORRESPONDING "800" NUMBER: 866-467-4705</p>
+
+        <p><strong> WHAT IS THE COMMITEE FOR PARAMDEICS AND FIREFIGHTERS PAC</strong><br />
+        RESPONSE: COMMITEE FOR PARAMDEICS AND FIREFIGHTERS PAC IS A POLITICAL ORGANIZATION THAT WORKS TO HELP THE GENERAL PUBLIC IDENTIFY AND SUPPORT FEDERAL CANDIDATES THAT SUPPORT ISSUES AFFECTING OUR NATIONâ€™S FIREFIGHTERS. </p>
+
+        <p><strong>QUESTION: ARE YOU A MEMBER OF THE ORGANIZATION?</strong><br />
+        RESPONSE:NO, I WORK FOR A PROFESSIONAL FUNDRAISING COMPANY WHICH HAS BEEN CONTRACTED BY THE PAC.</p>
+
+        <p><strong>QUESTION: WHAT IS THE TAX STATUS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: CONTRIBUTIONS AND DONATIONS TO THE COMMITEE FOR PARAMDEICS AND FIREFIGHTERS PAC ARE NOT CHARITABLE CONTRIBUTIONS AND ARE NOT DEDUCTIBLE AS CHARITABLE CONTRIBUTIONS FOR STATE AND FEDERAL INCOME TAX PURPOSES.</p>
+
+        <p><strong>QUESTION: WHERE IS THE ORGANIZATION LOCATED?</strong><br />
+        RESPONSE: COMMITEE FOR PARAMDEICS AND FIREFIGHTERS PAC IS LOCATED IN BOSTON, MASSACHUSETTS</p>
+
+        <p><strong>QUESTION: DO THEY HAVE A WEBSITE?</strong><br />
+        RESPONSE: YOU CAN VISIT THE COMMITTEE FOR PARAMEDICS AND FIREFIGHTERS PAC ON THE WEB AT www.paramedicfirepac.org</p>
+
+        <p><strong>QUESTION: HOW MUCH GOES TO THE ORGANIZATION?</strong><br />
+        RESPONSE: THERE IS NO SET PERCENTAGE.  THERE ARE SUBSTANTIAL FUNDRAISING EXPENSES, PROCESSING FEES, AND NORMAL FEC COMPLIANCE EXPENSES.  BUT THE PLAN IS TO HAVE ENOUGH FUNDS LEFT OVER TO SUPPORT THE CANDIDATES WHO WILL TRULY HELP THE CAUSE.</p>
+
+        <p><strong>QUESTION: DOES THIS HELP OUT LOCALLY?</strong><br />
+        RESPONSE:THIS IS A NATIONAL DRIVE.</p>
+
+        <p><strong>QUESTION: WHO DO YOU WORK FOR?</strong><br />
+        RESPONSE:I WORK FOR A PROFESSIONAL FUNDRAISING COMPANY HIRED BY THE PAC TO CONDUCT THIS DONOR AWARENESS APPEAL.</p>
+        </div>
+      </article>
+      <article class="camp" id="fcf">
+        <div class="camp-heading">
+          <h2>FIREFIGHTERS CHARITABLE FOUNDATION</h2>
+          <p>Source: fcft4t.html | Variants checked: fcft4t.html, fcft4tinbound.html, fcfxtap.html, fcfxtapinbound.html</p>
+        </div>
+        <div class="qna">
+<p><strong>QUESTION: IF A QUESTION IS NOT ON HERE?</strong><br />
+        RESPONSE: PLEASE REFER THE CONSUMER TO THE CORRESPONDING "800" NUMBER: 866-559-0287</p>
+
+        <p><strong>WHO ARE THE FFCF</strong><br />
+        RESPONSE: THE FFCF WAS FOUNDED IN 1991  and is a not for-profit 501(c)3 organization that pro-vides direct aid to victims of fire or disaster, other nonprofit agencies, and volunteer fire departments. FFCF is not a union or a representative of individual firefighters or their departments.</p>
+
+        <p><strong>QUESTION: ARE YOU A MEMBER OF THE ORGANIZATION?</strong><br />
+        RESPONSE:NO, I WORK FOR GOOD MERITS INC A PROFESSIONAL FUNDRAISING COMPANY WHICH HAS BEEN CONTRACTED BY THE FOUNDATION.</p>
+
+        <p><strong>QUESTION: WHAT IS THE TAX STATUS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: THE FFCF IS DESIGNATED BY THE IRS AS A 501(C)(3) NON-PROFIT CHARITABLE ORGANIZATION.  YOUR CONTRIBUTION MAY BE TAX DEDUCTIBLE, HOWEVER WE SUGGEST YOU CONSULT YOUR TAX PREPARER.</p>
+
+        <p><strong>QUESTION: WHERE IS THE ORGANIZATION LOCATED?</strong><br />
+        RESPONSE: THE FIREFIGHTERS CHARITABLE FOUNDATION IS HEADQUARTERED IN FARMINGDALE NY.</p>
+
+        <p><strong>QUESTION: DO THEY HAVE A WEBSITE?</strong><br />
+        RESPONSE: YOU CAN VISIT THEM ON THE WEB AT WWW.FFCF.ORG</p>
+
+        <p><strong>QUESTION: HOW MUCH GOES TO THE ORGANIZATION?</strong><br />
+        RESPONSE: OUR INSTRUCTIONS ARE TO TELL EVERYONE A MINIMUM OF 15% GOES TO THE CAUSE, HOWEVER PLEASE CALL THE TOLL FREE # WHICH IS 866-991-9415 FOR MORE INFORMATION.</p>
+
+        <p><strong>QUESTION: DOES THIS HELP OUT LOCALLY?</strong><br />
+        RESPONSE:THIS IS A NATIONAL DRIVE.</p>
+
+        <p><strong>QUESTION: WHO DO YOU WORK FOR?</strong><br />
+        RESPONSE:I WORK FOR GOOD MERITS HEADQUARTERED AT 8 THE GREEN SUITE 8514 DOVER DE 19901</p>
+        </div>
+      </article>
+      <article class="camp" id="ffsa">
+        <div class="camp-heading">
+          <h2>FIREFIGHTERS SUPPORT ALLIANCE</h2>
+          <p>Source: ffsat4t.html | Variants checked: ffsat4t.html, ffsat4tinbound.html, ffsaxtap.html, ffsaxtapinbound.html</p>
+        </div>
+        <div class="qna">
+<p><strong>QUESTION: IF A QUESTION IS NOT ON HERE?</strong><br />
+        RESPONSE: PLEASE REFER THE CONSUMER TO THE CORRESPONDING "800" NUMBER: 866-559-0287</p>
+
+        <p><strong> WHAT IS THE FIREFIGHTERS SUPPORT ALLIANCE ?</strong><br />
+        RESPONSE: THE FIREFIGHTERS SUPPORT ALLIANCE  IS A POLITICAL ORGANIZATION THAT WORKS TO HELP THE GENERAL PUBLIC IDENTIFY AND SUPPORT FEDERAL CANDIDATES THAT SUPPORT ISSUES AFFECTING OUR NATIONâ€™S FIREFIGHTERS.</p>
+
+        <p><strong>QUESTION: ARE YOU A MEMBER OF THE ORGANIZATION?</strong><br />
+        RESPONSE:NO, I WORK FOR A PROFESSIONAL FUNDRAISING COMPANY WHICH HAS BEEN CONTRACTED BY THE PAC.</p>
+
+        <p><strong>QUESTION: WHAT IS THE TAX STATUS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: CONTRIBUTIONS AND DONATIONS TO THE FIREFIGHTERS SUPPORT ALLIANCE ARE NOT CHARITABLE CONTRIBUTIONS AND ARE NOT DEDUCTIBLE AS CHARITABLE CONTRIBUTIONS FOR STATE AND FEDERAL INCOME TAX PURPOSES.</p>
+
+        <p><strong>QUESTION: WHERE IS THE ORGANIZATION LOCATED?</strong><br />
+        RESPONSE: FIREFIGHTERS SUPPORT ASSOCIATION IS LOCATED IN ALEXANDRIA VIRGINIA.</p>
+
+        <p><strong>QUESTION: DO THEY HAVE A WEBSITE?</strong><br />
+        RESPONSE: YOU CAN VISIT THE FIREFIGHTERS SUPPORT ALLIANCE ON THE WEB AT WWW.FIREFIGHTERSSUPPORTALLIANCE.COM</p>
+
+        <p><strong>QUESTION: HOW MUCH GOES TO THE ORGANIZATION?</strong><br />
+        RESPONSE: THERE IS NO SET PERCENTAGE.  THERE ARE SUBSTANTIAL FUNDRAISING EXPENSES, PROCESSING FEES, AND NORMAL FEC COMPLIANCE EXPENSES.  BUT THE PLAN IS TO HAVE ENOUGH FUNDS LEFT OVER TO SUPPORT THE CANDIDATES WHO WILL TRULY HELP THE CAUSE.</p>
+
+        <p><strong>QUESTION: DOES THIS HELP OUT LOCALLY?</strong><br />
+        RESPONSE:THIS IS A NATIONAL DRIVE.</p>
+
+        <p><strong>QUESTION: WHO DO YOU WORK FOR?</strong><br />
+        RESPONSE:I WORK FOR A PROFESSIONAL FUNDRAISING COMPANY HIRED BY THE PAC TO CONDUCT THIS DONOR AWARENESS APPEAL.</p>
+        </div>
+      </article>
+      <article class="camp" id="ncvf">
+        <div class="camp-heading">
+          <h2>NATIONAL COMMITTEE FOR VOLUNTEER FIREFIGHTERS PAC</h2>
+          <p>Source: ncvft4t.html | Variants checked: ncvft4t.html, ncvft4tinbound.html, ncvfxtap.html, ncvfxtapinbound.html</p>
+        </div>
+        <div class="qna">
+<p><strong>QUESTION: IF A QUESTION IS NOT ON HERE?</strong><br />
+        RESPONSE: PLEASE REFER THE CONSUMER TO THE CORRESPONDING "800" NUMBER: 1866-439-6480</p>
+
+        <p><strong>WHAT IS THE NATIONAL COMMITTEE FOR VOLUNTEER FIREFIGHTERS PAC</strong><br />
+        RESPONSE: NATIONAL COMMITTEE FOR VOLUNTEER FIREFIGHTERS PAC IS A POLITICAL ORGANIZATION THAT WORKS TO HELP THE GENERAL PUBLIC IDENTIFY AND SUPPORT FEDERAL CANDIDATES THAT SUPPORT ISSUES AFFECTING OUR NATIONS FIREFIGHTERS.</p>
+
+        <p><strong>QUESTION: ARE YOU A MEMBER OF THE ORGANIZATION?</strong><br />
+        RESPONSE:NO, I WORK FOR A PROFESSIONAL FUNDRAISING COMPANY WHICH HAS BEEN CONTRACTED BY THE PAC.</p>
+
+        <p><strong>QUESTION: WHAT IS THE TAX STATUS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: CONTRIBUTIONS AND DONATIONS TO THE NATIONAL COMMITTEE FOR VOLUNTEER FIREFIGHTERS PAC ARE NOT CHARITABLE CONTRIBUTIONS AND ARE NOT DEDUCTIBLE AS CHARITABLE CONTRIBUTIONS FOR STATE AND FEDERAL INCOME TAX PURPOSES.</p>
+
+        <p><strong>QUESTION: WHERE IS THE ORGANIZATION LOCATED?</strong><br />
+        RESPONSE: NATIONAL COMMITTEE FOR VOLUNTEER FIREFIGHTERS PAC IS LOCATED IN BOSTON, MASSACHUSETTS</p>
+
+        <p><strong>QUESTION: DO THEY HAVE A WEBSITE?</strong><br />
+        RESPONSE: YOU CAN VISIT THE NATIONAL COMMITTEE FOR VOLUNTEER FIREFIGHTERS PAC ON THE WEB AT www.firefighterpac.org</p>
+
+        <p><strong>QUESTION: HOW MUCH GOES TO THE ORGANIZATION?</strong><br />
+        RESPONSE: THERE IS NO SET PERCENTAGE.  THERE ARE SUBSTANTIAL FUNDRAISING EXPENSES, PROCESSING FEES, AND NORMAL FEC COMPLIANCE EXPENSES.  BUT THE PLAN IS TO HAVE ENOUGH FUNDS LEFT OVER TO SUPPORT THE CANDIDATES WHO WILL TRULY HELP THE CAUSE.</p>
+
+        <p><strong>QUESTION: DOES THIS HELP OUT LOCALLY?</strong><br />
+        RESPONSE:THIS IS A NATIONAL DRIVE.</p>
+
+        <p><strong>QUESTION: WHO DO YOU WORK FOR?</strong><br />
+        RESPONSE:I WORK FOR A PROFESSIONAL FUNDRAISING COMPANY HIRED BY THE PAC TO CONDUCT THIS DONOR AWARENESS APPEAL.</p>
+        </div>
+      </article>
+      <article class="camp" id="vfa">
+        <div class="camp-heading">
+          <h2>VOLUNTEER FIREFIGHTERS ALLIANCE</h2>
+          <p>Source: vfat4t.html | Variants checked: vfat4t.html, vfat4tinbound.html, vfaxtap.html, vfaxtapinbound.html</p>
+        </div>
+        <div class="qna">
+<p><strong>QUESTION: IF A QUESTION IS NOT ON HERE?</strong><br />
+        RESPONSE: PLEASE REFER THE CONSUMER TO THE CORRESPONDING "800" NUMBER: 866-493-4706</p>
+
+        <p><strong>WHO IS THE VFA</strong><br />
+        RESPONSE: THE VOLUNTEER FIREFIGHTER ALLIANCE IS A NATIONAL 501(C)3 NON-PROFIT CHARITABLE ORGANIZATION AND IS STRICTLY VOLUNTEER BASED. THE GOAL OF THE ORGANIZATION IS TO MITIGATE THE CAUSES AND EFFECTS OF LIFE-THREATENING ON-SCENE DANGERS WITH EQUIPMENT GRANTS TO UNDER-FUNDED AGENCIES.</p>
+
+        <p><strong>QUESTION: ARE YOU A MEMBER OF THE ORGANIZATION?</strong><br />
+        RESPONSE:NO, I WORK FOR GOOD MERITS INC A PROFESSIONAL FUNDRAISING COMPANY WHICH HAS BEEN CONTRACTED BY THE FOUNDATION.</p>
+
+
+        <p><strong>QUESTION: WHAT IS THE TAX STATUS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: THE VFA IS DESIGNATED BY THE IRS AS A 501(C)(3) NON-PROFIT CHARITABLE ORGANIZATION. YOUR CONTRIBUTION MAY BE TAX DEDUCTIBLE, HOWEVER WE SUGGEST YOU CONSULT YOUR TAX PREPARER.</p>
+
+        <p><strong>QUESTION: WHERE IS THE ORGANIZATION LOCATED?</strong><br />
+        RESPONSE: THE VFA IS HEADQUARTERED IN WHITE PINE TN.</p>
+
+        <p><strong>QUESTION: DO THEY HAVE A WEBSITE?</strong><br />
+        RESPONSE: YOU CAN VISIT THE FOUNDATION ON THE WEB AT WWW.volunteerfirefighteralliance.org</p>
+
+        <p><strong>QUESTION: HOW MUCH GOES TO THE ORGANIZATION?</strong><br />
+        RESPONSE: OUR INSTRUCTIONS ARE TO TELL EVERYONE A MINIMUM OF 13% GOES TO THE CAUSE, HOWEVER PLEASE CALL THE TOLL FREE # WHICH IS FOR MORE INFORMATION.</p>
+
+        <p><strong>QUESTION: DOES THIS HELP OUT LOCALLY?</strong><br />
+        RESPONSE:THIS IS A NATIONAL DRIVE.</p>
+
+        <p><strong>QUESTION: WHO DO YOU WORK FOR?</strong><br />
+        RESPONSE:I WORK FOR GOOD MERITS INC HEADQUARTERED AT 8 THE GREEN SUITE 8514 DOVER DE 19901</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="category" id="police">
+      <h1>Police</h1>
+      <article class="camp" id="acps">
+        <div class="camp-heading">
+          <h2>COALITION FOR POLICE AND SHERIFFS PAC</h2>
+          <p>Source: acpst4t.html | Variants checked: acpst4t.html, acpst4tinbound.html, acpsxtap.html, acpsxtapinbound.html</p>
+        </div>
+        <div class="qna">
+<p><strong>QUESTION: IF A QUESTION IS NOT ON HERE?</strong><br />
+        RESPONSE: PLEASE REFER THE CONSUMER TO THE CORRESPONDING "800" NUMBER: 866-439-6185.</p>
+
+        <p><strong>WHAT IS THE THe COALITION FOR POLICE AND SHERIFFS PAC?</strong><br />
+        RESPONSE: THE COALITION FOR POLICE AND SHERIFFS PAC IS A POLITICAL COMMITTEE WHOS MISSION IS TO PROVIDE CRITICAL SUPPORT TO LAW ENFORCEMENT BY ADVOCATING FOR LEGISLATION THAT WILL PROTECT OUR OFFICERS RIGHTS AND PROVIDE BENEFITS TO OFFICERS KILLED OR INJURED IN THE LINE OF DUTY.</p>
+
+        <p><strong>QUESTION: ARE YOU A MEMBER OF THE ORGANIZATION?</strong><br />
+        RESPONSE: NO, I WORK FOR A COMPANY HIRED TO CONDUCT THESE CALLS FOR THE ASSOCIATION.</p>
+
+        <p><strong>QUESTION: IS THIS A DEMOCRAT OR REPUBLICAN ORGANIZATION?</strong><br />
+        RESPONSE: THIS ORGANIZATION IS NOT DEMOCRATIC OR REPUBLICAN; IT'S A BIPARTISAN ORGANIZATION FOCUSING ON THE NEEDS OF LAW ENFORCEMENT OFFICERS.</p>
+
+        <p><strong>QUESTION: WHO IS THE HEAD OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: THIS COMMITTEE WAS ORGANIZED AND MANAGED BY A GROUP OF CITIZENS CONCERNED FOR THE DETERIORATING SUPPORT FOR LAW ENFORCEMENT OFFICERS.</p>
+
+        <p><strong>QUESTION: WHAT IS THE TAX STATUS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: THE ASSOCIATION IS A 527 ORGANIZATION UNDER THE IRS TAX CODE. DUE TO ITS PARTICULAR TAX STATUS, CONTRIBUTIONS ARE NOT TAX DEDUCTIBLE.</p>
+
+        <p><strong>QUESTION: WHERE IS THE ORGANIZATION LOCATED?</strong><br />
+        RESPONSE: THE POLITICAL COMMITTEE IS LOCATED IN WASHINGTON DC.</p>
+
+        <p><strong>QUESTION: DO THEY HAVE A WEBSITE?</strong><br />
+        RESPONSE: YOU CAN VISIT THE  ASSOCIATION ON THE WEB AT www.americanpolice.org</p>
+
+        <p><strong>QUESTION: HOW MUCH GOES TO THE POSA?</strong><br />
+        RESPONSE: THERE IS NO SET PERCENTAGE. THERE ARE SUBSTANTIAL FUNDRAISING EXPENSES, PROCESSING FEES, AND NORMAL FEC COMPLIANCE EXPENSES. BUT THE PLAN IS TO HAVE ENOUGH FUNDS LEFT OVER TO SUPPORT THE CANDIDATES WHO WILL TRULY HELP THE CAUSE.</p>
+
+        <p><strong>QUESTION: DOES THIS HELP OUT LOCALLY?</strong><br />
+        RESPONSE: THIS IS A NATIONAL PROGRAM.</p>
+
+        <p><strong>QUESTION: WHO DO YOU WORK FOR?</strong><br />
+        RESPONSE: I WORK FOR A PROFESSIONAL FUNDRAISING COMPANY HIRED BY THE PAC.</p>
+        </div>
+      </article>
+      <article class="camp" id="cpod">
+        <div class="camp-heading">
+          <h2>COMMITTEE FOR POLICE OFFICERS DEFENSE</h2>
+          <p>Source: cpodt4t.html | Variants checked: cpodt4t.html, cpodt4tinbound.html, cpodxtap.html, cpodxtapinbound.html</p>
+        </div>
+        <div class="qna">
+<p><strong>QUESTION: IF A QUESTION IS NOT ON HERE?</strong><br />
+        RESPONSE: PLEASE REFER THE CONSUMER TO THE CORRESPONDING "800" NUMBER: 866-310-8282</p>
+
+        <p><strong>QUESTION: WHAT IS THE COMMITTEE FOR POLICE OFFICERS DEFENSE?</strong><br />
+        RESPONSE: THE COMMITTEE FOR POLICE OFFICERS DEFENSE IS A 527 ORGANIZATION THAT WAS DEVELOPED TO HELP OUR POLICE OFFICERS, 
+        PUBLIC SAFETY OFFICERS AND SHERIFFS BY ELECTING CANDIDATES WHO SUPPORT BENEFITS TO OFFICERS INJURED IN THE LINE OF DUTY, 
+        PASSING LEGISLATION TO MAKE OUR COMMUNITIES SAFER AND PROVIDING FINANCIAL ASSISTANCE TO LAW ENFORCEMENT PERSONNEL.</p>
+
+        <p><strong>QUESTION: ARE YOU A MEMBER OF THE ORGANIZATION?</strong><br />
+        RESPONSE: NO, I WORK FOR A PROFESSIONAL FUNDRAISING COMPANY WHICH HAS BEEN CONTRACTED BY THE FEDERAL POLITICAL COMMITTEE, LAW ENFORCEMENT FOR A SAFER AMERICA, TO HELP..</p>
+
+        <p><strong>QUESTION: IS THIS A DEMOCRAT OR REPUBLICAN ORGANIZATION?</strong><br />
+        RESPONSE: THIS ORGANIZATION IS NOT DEMOCRATIC OR REPUBLICAN; IT'S A BIPARTISAN ORGANIZATION FOCUSING ON THE NEEDS OF LAW ENFORCEMENT OFFICERS.</p>
+
+        <p><strong>QUESTION:WHO IS THE HEAD OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: THIS POLITICAL COMMITTEE WAS ORGANIZED AND IS MANAGED BY A GROUP OF CITIZENS CONCERNED WITH THE DETERIORATING SUPPORT FOR EMERGENCY RESPONDERS</p>
+
+        <p><strong>QUESTION: WHAT IS THE TAX STATUS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE:COMMITTEE FOR POLICE OFFICERS DEFENSE IS A 527 ORGANIZATION UNDER THE IRS TAX CODE. DUE TO ITS PARTICULAR TAX STATUS CONTRIBUTIONS ARE NOT TAX DEDUCTIBLE</p>
+
+        <p><strong>QUESTION: WHERE IS THE ORGANIZATION LOCATED?</strong><br />
+        RESPONSE: COMMITTEE FOR POLICE OFFICERS DEFENSE IS HEADQUARTERED IN FAIRFAX VIRGINIA</p>
+
+        <p><strong>QUESTION: DO THEY HAVE A WEBSITE?</strong><br />
+        RESPONSE: YOU CAN VISIT THE COMMITTEE FOR POLICE OFFICERS DEFENSE ON THE WEB AT WWW.COMMITTEEFORPOLICEOFFICERSDEFENSE.COM</p>
+
+        <p><strong>QUESTION: HOW MUCH GOES TO THE ORG?</strong><br />
+        RESPONSE: THERE IS NO SET PERCENTAGE. THERE ARE SUBSTANTIAL FUNDRAISING EXPENSES, PROCESSING FEES, AND NORMAL FEC COMPLIANCE EXPENSES. 
+        BUT THE PLAN IS TO HAVE ENOUGH FUNDS LEFT OVER TO SUPPORT THE CANDIDATES WHO WILL TRULY HELP THE CAUSE. 800# 866-310-8282.</p>
+
+        <p><strong>QUESTION: DOES THIS HELP OUT LOCALLY?</strong><br />
+        RESPONSE: THIS IS A NATIONAL PROGRAM.</p>
+
+        <p><strong>QUESTION: WHO DO YOU WORK FOR?</strong><br />
+        RESPONSE: I WORK FOR A PROFESSIONAL FUNDRAISING COMPANY HIRED BY THE 527 ORGANIZATION.</p>
+        </div>
+      </article>
+      <article class="camp" id="dare">
+        <div class="camp-heading">
+          <h2>DARE DRUG ABUSE RESISTANCE EDUCATION</h2>
+          <p>Source: daret4t.html | Variants checked: daret4t.html, daret4tinbound.html, darextap.html, darextapinbound.html</p>
+        </div>
+        <div class="qna">
+<p><strong>QUESTION: IF A QUESTION IS NOT ON HERE?</strong><br />
+        RESPONSE: PLEASE REFER THE CONSUMER TO THE CORRESPONDING "800" NUMBER: 866-521-5776.</p>
+
+        <p><strong>QUESTION: WHO IS DARE:</strong><br />
+        RESPONSE: D.A.R.E was launched in 1983, as a drug prevention education program taught in thousands of schools in America.
+        These programs are lead by police officers who are trained by DARE in educating our children about the dangers of drugs and violence.</p>
+
+        <p><strong>QUESTION: ARE YOU A MEMBER OF THE ORGANIZATION?</strong><br />
+        RESPONSE:NO,I WORK FOR GOOD MERITS INC, A PROFESSIONAL FUNDRAISING COMPANY WHICH HAS BEEN CONTRACTED BY THE LAW ENFORCMENT AGAINST DRUGS.</p>
+
+
+        <p><strong>QUESTION: WHAT IS THE TAX STATUS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: DARE IS A 501(C)(3) YOUR CONTRIBUTION MAY BE TAX DEDUCTIBLE, BUT WE SUGGEST YOU CONSULT YOUR TAX PREPARER</p>
+
+        <p><strong>QUESTION: WHERE IS THE ORGANIZATION LOCATED?</strong><br />
+        RESPONSE: THE ORGANIZATION IS HEADQUARTERED IN SANTA MONICA CALIFORNIA</p>
+
+        <p><strong>QUESTION: DO THEY HAVE A WEBSITE?</strong><br />
+        RESPONSE: WWW.DARE.ORG</p>
+
+        <p><strong>QUESTION: HOW MUCH GOES TO THE POSA?</strong><br />
+        RESPONSE: OUR INSTRUCTIONS ARE TO TELL EVERYONE A MINIMUM OF 12% GOES TO THE CAUSE, IF YOU WOULD LIKE MORE INFORMATION I CAN GIVE YOU A NUMBER TO CALL</p>
+
+        <p><strong>QUESTION: DOES THIS HELP OUT LOCALLY?</strong><br />
+        RESPONSE: THIS IS A NATIONAL PROGRAM.</p>
+
+        <p><strong>QUESTION: WHO DO YOU WORK FOR?</strong><br />
+        RESPONSE:I WORK FOR GOOD MERITS INC HEADQUARTERED AT 8 THE GREEN SUITE 8514 DOVER DE 19901</p>
+        </div>
+      </article>
+      <article class="camp" id="flpta">
+        <div class="camp-heading">
+          <h2>FLORIDA POLICE AND TROOPERS ASSOCIATION</h2>
+          <p>Source: flptat4t.html | Variants checked: flptat4t.html, flptat4tinbound.html, flptaxtap.html, flptaxtapinbound.html</p>
+        </div>
+        <div class="qna">
+<p><strong>QUESTION: IF A QUESTION IS NOT ON HERE?</strong><br />
+        RESPONSE: PLEASE REFER THE CONSUMER TO THE CORRESPONDING "800" NUMBER: 866-619-6579</p>
+
+        <p><strong>QUESTION: WHO IS THE FLPTA:</strong><br />
+        RESPONSE: Florida Police & Troopers Association also known as International Union of Police Associations is a non-profit organization whose mission is to 
+        organize all law enforcement officers, secure just compensation for their services, to increase the members' skill and efficiency, 
+        encourage improved methods of law enforcement and to aid in providing financial assistance to law enforcement officers and their families in times of crisis resulting from disasters, 
+        violence or injury..</p>
+
+        <p><strong>QUESTION: ARE YOU A MEMBER OF THE ORGANIZATION?</strong><br />
+        RESPONSE:NO, I WORK FOR GOOD MERITS, A PROFESSIONAL FUNDRAISING COMPANY WHICH HAS BEEN CONTRACTED BY THE FLORIDA POLICE AND TROOPERS ASSOCIATION</p>
+        
+        <p><strong>QUESTION: WHO IS THE HEAD OF THIS ORGANIZATION</strong><br />
+        RESPONSE: SAM CABRAL IS THE EXECUTIVE DIRECTOR
+
+        <p><strong>QUESTION: WHAT IS THE TAX STATUS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: THE FLPTA IS A 501C5 POLICE UNION NOT A CHARITY. DUE TO THE ORGANIZATIONS TAX STATUS YOUR DONATION IS NOT TAX DEDUCTIBLE</p>
+
+        <p><strong>QUESTION: WHERE IS THE ORGANIZATION LOCATED?</strong><br />
+        RESPONSE: THE FLORIDA POLICE AND TROOPERS ASSOCIATION HEADQUARTERED IN SARASOTA FLORIDA</p>
+
+
+        <p><strong>QUESTION: DO THEY HAVE A WEBSITE?</strong><br />
+        RESPONSE: YOU CAN VISIT THE FLORIDA POLICE AND TROOPERS ASSOCIATIONON THE WEB AT WWW.FPTADONATIONS.ORG</p>
+
+        <p><strong>QUESTION: HOW MUCH GOES TO THE ORGANIZATION?</strong><br />
+        RESPONSE: A portion of the gross sponsorship proceeds is used to defray the expenses of public education, administration, and the cost of this appeal. The FLORIDA POLICE AND TROOPERS ASSOCIATION will retain at least 15% of gross proceeds after expenses.
+        </p>
+
+        <p><strong>QUESTION: DOES THIS HELP OUT LOCALLY?</strong><br />
+        RESPONSE: THIS IS A STATE WIDE PROGRAM.</p>
+
+        <p><strong>QUESTION: WHO DO YOU WORK FOR?</strong><br />
+        RESPONSE:I WORK FOR GOOD MERITS INC HEADQUARTERED AT 8 THE GREEN SUITE 8514 DOVER DE 19901</p>
+        </div>
+      </article>
+      <article class="camp" id="lead">
+        <div class="camp-heading">
+          <h2>LAW ENFORCEMENT AGAINST DRUGS</h2>
+          <p>Source: leadt4t.html | Variants checked: leadt4t.html, leadt4tinbound.html, leadxtap.html, leadxtapinbound.html</p>
+        </div>
+        <div class="qna">
+<p><strong>QUESTION: IF A QUESTION IS NOT ON HERE?</strong><br />
+        RESPONSE: PLEASE REFER THE CONSUMER TO THE CORRESPONDING "800" NUMBER: 866-528-9961.</p>
+
+        <p><strong>QUESTION: WHO IS LEAD:</strong><br />
+        RESPONSE: LAW ENFORCMENT AGAINST DRUGS IA NON PROFIT ORGANIZATION SUPPORTED BY DEDICATED POLICE OFFICERS COMMITTED TO PROTECTING OUR YOUTH AND COMMUNITIES FROM THE SPREAD OF DRUGS,
+        DRUG RELATED CRIMES AND VIOLENCE. LEAD OFFERS PROGRAMS TO CHILDREN, TEACHERS AND OFFICERS NATIONWIDE TO ASSIST IN TRAINING AND CONTINUED EDUCATION AGAINST THE SPREAD OF DRUGS 
+        IN OUR COMMUNITIES.</p>
+
+        <p><strong>QUESTION: ARE YOU A MEMBER OF THE ORGANIZATION?</strong><br />
+        RESPONSE:NO,I WORK FOR GOOD MERITS INC, A PROFESSIONAL FUNDRAISING COMPANY WHICH HAS BEEN CONTRACTED BY THE LAW ENFORCMENT AGAINST DRUGS.</p>
+
+
+        <p><strong>QUESTION: WHAT IS THE TAX STATUS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: LEAD IS A 501(C)(3) YOUR CONTRIBUTION MAY BE TAX DEDUCTIBLE, BUT WE SUGGEST YOU CONSULT YOUR TAX PREPARER</p>
+
+        <p><strong>QUESTION: WHERE IS THE ORGANIZATION LOCATED?</strong><br />
+        RESPONSE: LAW ENFORCEMENT AGAINST DRUGS IS HEADQUARTERED IN NEW JERSEY</p>
+
+        <p><strong>QUESTION: DO THEY HAVE A WEBSITE?</strong><br />
+        RESPONSE: WWW.LEADRUGS.ORG</p>
+
+        <p><strong>QUESTION: HOW MUCH GOES TO THE POSA?</strong><br />
+        RESPONSE: OUR INSTRUCTIONS ARE TO TELL EVERYONE A MINIMUM OF 15% GOES TO THE CAUSE, IF YOU WOULD LIKE MORE INFORMATION I CAN GIVE YOU A NUMBER TO CALL</p>
+
+        <p><strong>QUESTION: DOES THIS HELP OUT LOCALLY?</strong><br />
+        RESPONSE: THIS IS A NATIONAL PROGRAM.</p>
+
+        <p><strong>QUESTION: WHO DO YOU WORK FOR?</strong><br />
+        RESPONSE:I WORK FOR GOOD MERITS INC HEADQUARTERED AT 8 THE GREEN SUITE 8514 DOVER DE 19901</p>
+        </div>
+      </article>
+      <article class="camp" id="mifpac">
+        <div class="camp-heading">
+          <h2>MICHIGAN FRATERNAL ORDER OF POLICE FUND</h2>
+          <p>Source: mifpact4t.html | Variants checked: mifpact4t.html, mifpact4tinbound.html, mifpacxtap.html, mifpacxtapinbound.html</p>
+        </div>
+        <div class="qna">
+<p><strong>QUESTION: IF A QUESTION IS NOT ON HERE?</strong><br />
+        RESPONSE: PLEASE REFER THE CONSUMER TO THE CORRESPONDING "800" NUMBER: 866-439-6185.</p>
+
+        <p><strong>QUESTION: WHAT IS THE MIFOP PAC</strong><br />
+        RESPONSE: THE MICHIGAN FRATERNAL ORDER OF POLICE POLITICAL FUND WAS FORMED TOGETHER WITH THE MICHIGAN FRATERNAL ORDER OF POLICE TO IMPROVE THE LAW ENFORCEMENT PROFESSION BY SUPPORTING IMPORTANT POLITICAL INITIATIVES AND LEGISLATION THAT AFFECT POLICE OFFICERS IN THE THE STATE.</p>
+
+        <p><strong>QUESTION: ARE YOU A MEMBER OF THE ORGANIZATION?</strong><br />
+        RESPONSE: NO, I WORK FOR A PROFESSIONAL FUNDRAISING COMPANY WHICH HAS BEEN CONTRACTED BY THE MICHIGAN FRATERNAL ORDER OF POLICE POLITICAL FUND TO HELP.</p>
+
+        <p><strong>QUESTION: IS THIS A DEMOCRAT OR REPUBLICAN ORGANIZATION?</strong><br />
+        RESPONSE: THIS ORGANIZATION IS NOT DEMOCRATIC OR REPUBLICAN; IT'S A BIPARTISAN ORGANIZATION FOCUSING ON THE NEEDS OF LAW ENFORCEMENT OFFICERS.</p>
+
+        <p><strong>QUESTION: WHO IS THE HEAD OF THE ORGANIZATION?</strong><br />
+        RESPONSE: THIS COMMITTEE WAS ORGANIZED AND MANAGED BY A GROUP OF CITIZENS CONCERNED FOR THE DETERIORATING SUPPORT FOR LAW ENFORCEMENT OFFICERS.</p>
+
+        <p><strong>QUESTION: WHAT IS THE TAX STATUS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: THE POLICE OFFICERS SUPPORT ASSOCIATION IS A 527 ORGANIZATION UNDER THE IRS TAX CODE. DUE TO ITS PARTICULAR TAX STATUS, CONTRIBUTIONS ARE NOT TAX DEDUCTIBLE.</p>
+
+        <p><strong>QUESTION: WHERE IS THE ORGANIZATION LOCATED?</strong><br />
+        RESPONSE: THE MICHIGAN FRATERNAL ORDER OF POLICE POLITICAL FUND IS HEADQUARTERED IN MADISON HEIGHTS, MICHIGAN.</p>
+
+        <p><strong>QUESTION: DO THEY HAVE A WEBSITE?</strong><br />
+        RESPONSE:YOU CAN VISIT THE MIFOP ON THE WEB AT WWW.MIFOPPOLITICALACTIONFUND.COM</p>
+
+        <p><strong>QUESTION: HOW MUCH GOES TO THE MIFPAC?</strong><br />
+        RESPONSE: THERE IS NO SET PERCENTAGE. THERE ARE SUBSTANTIAL FUNDRAISING EXPENSES, PROCESSING FEES, AND NORMAL FEC COMPLIANCE EXPENSES. BUT THE PLAN IS TO HAVE ENOUGH FUNDS LEFT OVER TO SUPPORT THE CANDIDATES WHO WILL TRULY HELP THE CAUSE. 800# 866-439-6185</p>
+
+        <p><strong>QUESTION: DOES THIS HELP OUT LOCALLY?</strong><br />
+        RESPONSE: THIS IS A STATE WIDE PROGRAM.</p>
+
+        <p><strong>QUESTION: WHO DO YOU WORK FOR?</strong><br />
+        RESPONSE: I WORK FOR A PROFESSIONAL FUNDRAISING COMPANY HIRED BY THE FUND.</p>
+        </div>
+      </article>
+      <article class="camp" id="nerc">
+        <div class="camp-heading">
+          <h2>NATIONAL EMERGENCY RESPONDERS COALITION</h2>
+          <p>Source: nerct4t.html | Variants checked: nerct4t.html, nerct4tinbound.html, nercxtap.html, nercxtapinbound.html</p>
+        </div>
+        <div class="qna">
+<p><strong>QUESTION: IF A QUESTION IS NOT ON HERE?</strong><br />
+        RESPONSE: PLEASE REFER THE CONSUMER TO THE CORRESPONDING "800" NUMBER: 866-439-6480.</p>
+
+        <p><strong>WHAT IS THE NATIONAL EMERGENCY RESPONDERS COALITION?</strong><br />
+        RESPONSE: THE NATIONAL EMERGENCY RESPONDERS COALITION IS A PROJECT OF A FEDERAL POLITICAL COMMITTEE CALLED LAW ENFORCEMENT FOR A SAFER AMERICA PAC. LAW ENFORCEMENT FOR A SAFER AMERICA PAC PUSHES TO GET CANDIDATES ELECTED WHO SUPPORT EMERGENCY RESPONDERS AND WILL PUSH TO GET LEGISLATION AND POLICY PASSED THAT PROMOTES THE SAFEY OF OUR EMERGENCY RESPONDERS.</p>
+
+        <p><strong>QUESTION: ARE YOU A MEMBER OF THE ORGANIZATION?</strong><br />
+        RESPONSE: NO, I WORK FOR A COMPANY HIRED TO CONDUCT THESE CALLS FOR THE PAC.</p>
+
+        <p><strong>QUESTION: IS THIS A DEMOCRAT OR REPUBLICAN ORGANIZATION?</strong><br />
+        RESPONSE: THIS ORGANIZATION IS NOT DEMOCRATIC OR REPUBLICAN; IT'S A BIPARTISAN ORGANIZATION FOCUSING ON THE NEEDS OF EMERGENCY RESPONDERS OFFICERS.</p>
+
+        <p><strong>QUESTION: WHO IS THE HEAD OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: THIS COMMITTEE WAS ORGANIZED AND MANAGED BY A GROUP OF CITIZENS CONCERNED FOR THE DETERIORATING SUPPORT FOR EMERGENCY RESPONDERS</p>
+
+        <p><strong>QUESTION: WHAT IS THE TAX STATUS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: LAW ENFORCEMENT FOR A SAFER AMERICA PAC IS A 527 POLITICAL ORGANIZATION UNDER THE IRS TAX CODE. DUE TO ITS PARTICULAR TAX STATUS CONTRIBUTIONS ARE NOT TAX DEDUCTIBLE.</p>
+
+        <p><strong>QUESTION: WHERE IS THE ORGANIZATION LOCATED?</strong><br />
+        RESPONSE: THE POLITICAL COMMITTEE IS LOCATED IN SARASOTA, FL</p>
+
+        <p><strong>QUESTION: DO THEY HAVE A WEBSITE?</strong><br />
+        RESPONSE: YOU CAN VISIT THE NATIONAL EMERGENCY RESPONDERS COALITION ON THE WEB AT www.nationalemergencyresponderscoalition.org</p>
+
+        <p><strong>QUESTION: HOW MUCH GOES TO THE NERC?</strong><br />
+        RESPONSE: THERE IS NO SET PERCENTAGE. THERE ARE SUBSTANTIAL FUNDRAISING EXPENSES, PROCESSING FEES, AND NORMAL FEC COMPLIANCE EXPENSES. BUT THE PLAN IS TO HAVE ENOUGH FUNDS LEFT OVER TO SUPPORT THE CANDIDATES WHO WILL TRULY HELP THE CAUSE.</p>
+
+        <p><strong>QUESTION: DOES THIS HELP OUT LOCALLY?</strong><br />
+        RESPONSE: THIS IS A NATIONAL PROGRAM.</p>
+
+        <p><strong>QUESTION: WHO DO YOU WORK FOR?</strong><br />
+        RESPONSE: I WORK FOR A PROFESSIONAL FUNDRAISING COMPANY HIRED BY THE PAC.</p>
+        </div>
+      </article>
+      <article class="camp" id="nfof">
+        <div class="camp-heading">
+          <h2>NATIONAL FALLEN OFFICER FOUNDATION</h2>
+          <p>Source: nfoft4t.html | Variants checked: nfoft4t.html, nfoft4tinbound.html, nfofxtap.html, nfofxtapinbound.html</p>
+        </div>
+        <div class="qna">
+<p><strong>QUESTION: IF A QUESTION IS NOT ON HERE?</strong><br />
+        RESPONSE: PLEASE REFER THE CONSUMER TO THE CORRESPONDING "800" NUMBER: 18664432681.</p>
+
+        <p><strong>WHO IS THE NATIONAL FALLEN OFFICER FOUNDATION</strong><br />
+        RESPONSE: HE NATIONAL FALLEN OFFICER FOUNDATION IS A NATIONAL LAW ENFORCEMENT ORGANIZATION BASED IN WASHINGTON DC DEDICATED TO PUBLIC SAFETY ADVOCACY, SUPPORTING FALLEN OFFICER FAMILIES, AND PROVIDING RESOURCES TO MITIGATE RISKS FOR POLICE ACROSS AMERICA.</p>
+
+        <p><strong>QUESTION: ARE YOU A MEMBER OF THE ORGANIZATION?</strong><br />
+        RESPONSE:NO,I WORK FOR GOOD MERITS INC, A PROFESSIONAL FUNDRAISING COMPANY WHICH HAS BEEN CONTRACTED BY NATIONAL FALLEN OFFICER FOUNDATION</p>
+
+
+        <p><strong>QUESTION: WHAT IS THE TAX STATUS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: THE NATIONAL FALLEN OFFICER FOUNDATION IS A 501(C)(3) YOUR CONTRIBUTION MAY BE TAX DEDUCTIBLE, BUT WE SUGGEST YOU CONSULT YOUR TAX PREPARER</p>
+
+        <p><strong>QUESTION: WHERE IS THE ORGANIZATION LOCATED?</strong><br />
+        RESPONSE: THE NATIONAL FALLEN OFFICER FOUNDATION IS HEADQUARTERED IN WASHINGTON, DC</p>
+
+        <p><strong>QUESTION: DO THEY HAVE A WEBSITE?</strong><br />
+        RESPONSE: WWW.NATIONALFOF.ORG</p>
+
+        <p><strong>QUESTION: HOW MUCH GOES TO THE ORGANIZATION?</strong><br />
+        RESPONSE: A PORTION OF THE GROSS SPONSORSHIP PROCEEDS IS USED TO DEFRAY THE EXPENSES OF PUBLIC EDUCATION, ADMINISTRATION, AND THE COST OF THIS APPEAL. NATIONAL FALLEN OFFICER FOUNDATION WILL RETAIN AT LEAST 13% OF GROSS PROCEEDS AFTER EXPENSES</p>
+
+        <p><strong>QUESTION: DOES THIS HELP OUT LOCALLY?</strong><br />
+        RESPONSE:NATIONAL FALLEN OFFICER FOUNDATION IS A NATION WIDE ORGANIZATION</p>
+
+        <p><strong>QUESTION: WHO DO YOU WORK FOR?</strong><br />
+        RESPONSE:I WORK FOR GOOD MERITS INC HEADQUARTERED AT 8 THE GREEN SUITE 8514 DOVER DE 19901</p>
+        </div>
+      </article>
+      <article class="camp" id="npsf">
+        <div class="camp-heading">
+          <h2>NATIONAL POLICE SUPPORT FUND</h2>
+          <p>Source: npsft4t.html | Variants checked: npsft4t.html, npsft4tinbound.html, npsfxtap.html, npsfxtapinbound.html</p>
+        </div>
+        <div class="qna">
+<p><strong>QUESTION: IF A QUESTION IS NOT ON HERE?</strong><br />
+        RESPONSE: PLEASE REFER THE CONSUMER TO THE CORRESPONDING "800" NUMBER: 1-800-292-4781.</p>
+
+        <p><strong>WHAT IS THE NATIONAL POLICE SUPPORT FUND?</strong><br />
+        RESPONSE: The National Police Support Fund is a national nonprofit coalition of
+        grassroots supporters committed to promoting the interests of America’s police officers within the national political and public policy process.</p>
+
+        <p><strong>QUESTION: ARE YOU A MEMBER OF THE ORGANIZATION?</strong><br />
+        RESPONSE: WELL, I WAS HIRED ON BEHALF OF THE National Police Support Fund TO CONDUCT THESE CALLS. IF YOU WOULD LIKE MORE INFORMATION. I CAN GIVE YOU A NUMBER TO CALL - 1-800-292-4781</p>
+
+        <p><strong>QUESTION: IS THIS A DEMOCRAT OR REPUBLICAN ORGANIZATION?</strong><br />
+        RESPONSE: THIS ORGANIZATION IS NOT DEMOCRATIC OR REPUBLICAN; IT'S A BIPARTISAN ORGANIZATION FOCUSING ON THE NEEDS OF LAW ENFORCEMENT OFFICERS.</p>
+
+        <p><strong>QUESTION: WHO IS THE HEAD OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: THIS POLITICAL ORGANIZATION WAS ORGANIZED AND IS MANAGED BY A GROUP OF CITIZENS CONCERNED WITH THE LACK OF SUPPORT OF OFFICERSIN CONGRESS.</p>
+
+        <p><strong>QUESTION: WHAT IS THE TAX STATUS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: NPSF IS A 527 ORGANIZATION UNDER THE IRS TAX CODE. DUE TO ITS PARTICULAR TAX STATUS CONTRIBUTIONS ARE NOT TAX DEDUCTIBLE.</p>
+
+        <p><strong>QUESTION: WHERE IS THE ORGANIZATION LOCATED?</strong><br />
+        RESPONSE: NATIONAL POLICE SUPPORT FUND IS LOCATED IN ALEXANDRIA VIRGINIA..</p>
+
+        <p><strong>QUESTION: DO THEY HAVE A WEBSITE?</strong><br />
+        RESPONSE: YOU CAN VISIT THE NATIONAL POLICE SUPPORT FUND ON THE WEB AT WWW.NATIONALPOLICESUPPORTFUND.COM</p>
+
+        <p><strong>QUESTION: HOW MUCH GOES TO THE POSA?</strong><br />
+        RESPONSE: HERE IS NO SET PERCENTAGE. THERE ARE SUBSTANTIAL FUNDRAISING EXPENSES, PROCESSING FEES, AND NORMAL FEC COMPLIANCE EXPENSES. BUT THE PLAN IS TO HAVE ENOUGH FUNDS LEFT OVER TO SUPPORT THE CANDIDATES WHO WILL TRULY HELP THE CAUSE.</p>
+
+        <p><strong>QUESTION: DOES THIS HELP OUT LOCALLY?</strong><br />
+        RESPONSE: THIS IS A NATIONAL PROGRAM.</p>
+
+        <p><strong>QUESTION: WHO DO YOU WORK FOR?</strong><br />
+        RESPONSE: I WORK FOR A PROFESSIONAL FUNDRAISING COMPANY HIRED BY THE PAC.</p>
+        </div>
+      </article>
+      <article class="camp" id="njpof">
+        <div class="camp-heading">
+          <h2>NEW JERSEY POLICE OFFICERS FOUNDATION</h2>
+          <p>Source: njpoft4t.html | Variants checked: njpoft4t.html, njpoft4tinbound.html, njpofxtap.html, njpofxtapinbound.html</p>
+        </div>
+        <div class="qna">
+<p><strong>QUESTION: IF A QUESTION IS NOT ON HERE?</strong><br />
+        RESPONSE: PLEASE REFER THE CONSUMER TO THE CORRESPONDING "800" NUMBER: 866-619-6579</p>
+
+        <p><strong>QUESTION: WHAT IS THE NJPOF:</strong><br />
+        RESPONSE: NJPOF IS A NEW JERSEY ORGANIZATION COMPRISED OF LOCAL AND COUNTY POLICE OFFICERS THROUGHOUT THE STATE. 
+        THEY AIM TO SUPPORT OFFICERS BY HELPING PROVIDE EQUIPMENT AND DEATH BENEFITS.</p>
+
+        <p><strong>QUESTION: ARE YOU A MEMBER OF THE ORGANIZATION?</strong><br />
+        RESPONSE:NO,I WORK FOR GOOD MERITS INC, A PROFESSIONAL FUNDRAISING COMPANY WHICH HAS BEEN CONTRACTED BY THE NEW JERSEY POLICE OFFICERS FOUNDATION.</p>
+        
+
+        <p><strong>QUESTION: WHAT IS THE TAX STATUS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: THE NJPOF IS REGISTERED NON-PROFIT ORGANIZATION HOWEVER DUE TO IT'S PARTICULAR TAX STATUS UR DONATION IS NOT TAX DEDUCTIBLE</p>
+
+        <p><strong>QUESTION: DO THEY HAVE A WEBSITE</strong><br />
+        RESPONSE: https://njpof.org/</p>
+
+        <p><strong>QUESTION: WHERE IS THE ORGANIZATION LOCATED</strong><br />
+        RESPONSE: THE NJ POLICE OFFICERS FOUNDATION IS LOCATED PO BOX 352, LYNDHURST,NJ 07071
+
+        <p><strong>QUESTION: WHERE ARE THE MEMBERS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: THE MEMBERSHIP CONSISTS OF POLICE OFFICERS THROUGHOUT NEW JERSEY</p>
+
+        <p><strong>QUESTION: HOW MUCH GOES TO THE ORGANIZATION?</strong><br />
+        RESPONSE: THIS IS AN ONGOING CAMPAIGNS, BUT YOU'LL BE HAPPY TO KNOW THAT AFTER ALL EXPENSES WERE PAID THE ORGANIZATION STILL RECEIVED 15% OF THE GROSS PROCEEDS
+        </p>
+
+        <p><strong>QUESTION: DOES THIS HELP OUT LOCALLY?</strong><br />
+        RESPONSE: THIS IS A STATE WIDE PROGRAM.</p>
+
+        <p><strong>QUESTION: WHO DO YOU WORK FOR?</strong><br />
+        RESPONSE:I WORK FOR GOOD MERITS INC HEADQUARTERED AT 8 THE GREEN SUITE 8514 DOVER DE 19901</p>
+        </div>
+      </article>
+      <article class="camp" id="pnoa">
+        <div class="camp-heading">
+          <h2>PENNSYLVANIA NARCOTICS OFFICERS ASSOCIATION</h2>
+          <p>Source: pnoat4t.html | Variants checked: pnoat4t.html, pnoat4tinbound.html, pnoaxtap.html, pnoaxtapinbound.html</p>
+        </div>
+        <div class="qna">
+<p><strong>QUESTION: IF A QUESTION IS NOT ON HERE?</strong><br />
+        RESPONSE: PLEASE REFER THE CONSUMER TO THE CORRESPONDING "800" NUMBER: 866-521-5776.</p>
+
+        <p><strong>QUESTION: WHO IS THE PNOA:</strong><br />
+        RESPONSE: THE PENNSYLVANIA NARCOTICS OFFICERS ASSOCIATION IS A STATEWIDE ORGANIZATION DEDICATED IN HELPING IN THE FIGHT AGAINST DRUG TRAFFICKING. 
+        THERE ARE APPROXIMATELY 10 THOUSAND OFFICERS IN THE COMMONWEALTH OF PENNSYLVANIA AND ENGANGED IN THE WAR AGAINST DRUGS EVERY DAY. 
+        THE PNOA WILL FIGHT TO PROVIDE BENEFITS AND SUPPORT FOR OUR BRAVE MEN AND WOMEN IN BLUE..</p>
+
+        <p><strong>QUESTION: ARE YOU A MEMBER OF THE ORGANIZATION?</strong><br />
+        RESPONSE:NO, I WORK FOR A PROFESSIONAL FUNDRAISING COMPANY WHICH HAS BEEN CONTRACTED BY THE THE PENNSYLVANIA NARCOTICS OFFICERS ASSOCIATION</p>
+
+
+        <p><strong>QUESTION: WHAT IS THE TAX STATUS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: THE PENNSYLVANIA NARCOTICS OFFICERS ASSOCIATION IS DESIGNATED BY THE IRS AS A 501(C)(3) NON PROFIT CHARITABLE ORGANIZATION. YOUR CONTRIBUTION MAY BE TAX DEDUCTIBLE.</p>
+
+        <p><strong>QUESTION: WHERE IS THE ORGANIZATION LOCATED?</strong><br />
+        RESPONSE: THE PENNSYLVANIA NARCOTICS OFFICERS ASSOCIATION IS HEADQUARTERED IN HARRISBURG PENNSYLVANIA</p>
+
+        <p><strong>QUESTION: DO THEY HAVE A WEBSITE?</strong><br />
+        RESPONSE: YOU CAN VISIT THE PENNSYLVANIA NARCOTICS OFFICERS ASSOCIATION ON THE WEB AT WWW.PNOA.ORG</p>
+
+        <p><strong>QUESTION: HOW MUCH GOES TO THE ORG?</strong><br />
+        RESPONSE: OUR INSTRUCTIONS ARE TO TELL EVERYONE A MINIMUM OF 15% GOES TO THE CAUSE, HOWEVER PLEASE CALL THE TOLL FREE # WHICH IS 866-521-5776 FOR MORE INFORMATION.</p>
+
+        <p><strong>QUESTION: DOES THIS HELP OUT LOCALLY?</strong><br />
+        RESPONSE: THIS IS A STATEWIDE PROGRAM.</p>
+
+        <p><strong>QUESTION: WHO DO YOU WORK FOR?</strong><br />
+        RESPONSE:I WORK FOR GOOD MERITS INC HEADQUARTERED AT 8 THE GREEN SUITE 8514 DOVER DE 19901</p>
+        </div>
+      </article>
+      <article class="camp" id="pssa">
+        <div class="camp-heading">
+          <h2>POLICE AND SHERIFFS SUPPORT ALLIANCE PAC</h2>
+          <p>Source: pssat4t.html | Variants checked: pssat4t.html, pssat4tinbound.html, pssaxtap.html, pssaxtapinbound.html</p>
+        </div>
+        <div class="qna">
+<p><strong>QUESTION: IF A QUESTION IS NOT ON HERE?</strong><br />
+        RESPONSE: PLEASE REFER THE CONSUMER TO THE CORRESPONDING "800" NUMBER 866-434-3079</p>
+
+        <p><strong>QUESTION: FOR ANY QUESTION THAT IS NOT IN THE SCRIPT OR QNA?</strong><br />
+        RESPONSE: : UNFORTUNATELY (MAM/SIR) I DONT HAVE AN ANSWER FOR THAT HERE AND I DONT WANT TO ANSWER YOU INCORRECTLY. HOWEVER I CAN GIVE A TOLL FREE NUMBER YOU CAN CALL (866-434-3079).
+
+
+        <p><strong>QUESTION: WHAT IS THE POLICE OFFICERS SUPPORT ASSOCIATION?</strong><br />
+        RESPONSE: : THE POLICE AND SHERIFFS SUPPORT ALLIANCE PAC IS A PROJECT OF A FEDERAL POLITICAL COMMITTEE CALLED HONORING AMERICAN LAW ENFORCEMENT PAC. THEY PUSH TO GET CANDIDATES ELECTED WHO SUPPORT EMERGENCY RESPONDERS AND WILL PUSH TO GET LEGISLATION PASSED THAT PROMOTES THE SAFEY OF OUR EMERGENCY RESPONDERS.</p>
+
+        <p><strong>QUESTION: ARE YOU A MEMBER OF THE ORGANIZATION?</strong><br />
+        RESPONSE: NO, I WORK FOR A COMPANY HIRED TO CONDUCT THESE CALLS FOR THE pac.</p>
+
+        <p><strong>QUESTION: IS THIS A DEMOCRAT OR REPUBLICAN ORGANIZATION?</strong><br />
+        RESPONSE: THIS ORGANIZATION IS NOT DEMOCRATIC OR REPUBLICAN; IT'S A BIPARTISAN ORGANIZATION FOCUSING ON THE NEEDS OF LAW ENFORCEMENT OFFICERS.</p>
+
+    
+        <p><strong>QUESTION: WHAT IS THE TAX STATUS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: POLICE AND SHERIFFS SUPPORT ALLIANCE PAC IS A 527 ORGANIZATION  UNDER THE IRS TAX CODE. DUE TO ITS PARTICULAR TAX STATUS, CONTRIBUTIONS ARE NOT TAX DEDUCTIBLE.</p>
+
+        <p><strong>QUESTION: WHERE IS THE ORGANIZATION LOCATED?</strong><br />
+        RESPONSE: POLICE AND SHERIFFS SUPPORT ALLIANCE PAC IS HEADQUARTERED IN WASHINGTON DC.</p>
+
+        <p><strong>QUESTION: DO THEY HAVE A WEBSITE?</strong><br />
+        RESPONSE: YOU CAN VISIT THE POLICE AND SHERIFFS SUPPORT ALLIANCE PAC ON THE WEB AT WWW.POLICEANDSHERIFFPAC.ORG</p>
+
+        <p><strong>QUESTION: HOW MUCH GOES TO THE POSA?</strong><br />
+        RESPONSE: THERE IS NO SET PERCENTAGE. THERE ARE SUBSTANTIAL FUNDRAISING EXPENSES, PROCESSING FEES, AND NORMAL FEC COMPLIANCE EXPENSES. BUT THE PLAN IS TO HAVE ENOUGH FUNDS LEFT OVER TO SUPPORT THE CANDIDATES WHO WILL TRULY HELP THE CAUSE.</p>
+
+        <p><strong>QUESTION: DOES THIS HELP OUT LOCALLY?</strong><br />
+        RESPONSE: THIS IS A NATIONAL PROGRAM.</p>
+
+        <p><strong>QUESTION: WHO DO YOU WORK FOR?</strong><br />
+        RESPONSE: I WORK FOR A PROFESSIONAL FUNDRAISING COMPANY HIRED BY THE PAC.</p>
+        </div>
+      </article>
+      <article class="camp" id="ptrf">
+        <div class="camp-heading">
+          <h2>POLICE AND TROOPERS RELIEF FOUNDATION</h2>
+          <p>Source: ptrft4t.html | Variants checked: ptrft4t.html, ptrft4tinbound.html, ptrfxtap.html, ptrfxtapinbound.html</p>
+        </div>
+        <div class="qna">
+<p><strong>QUESTION: IF A QUESTION IS NOT ON HERE?</strong><br />
+        RESPONSE: PLEASE REFER THE CONSUMER TO THE CORRESPONDING "800" NUMBER: 18664396590.</p>
+
+        <p><strong>WHO IS THE POLICE AND TROOPERS RELIEF FOUNDATION:</strong><br />
+        RESPONSE: THE POLICE AND TROOPERS RELIEF FOUNDATION IS A SPECIAL PROGRAM OF LAW ENFORCEMENT OFFICERS RELIEF FUND WHICH IS AN ORGANIZATION 
+        THAT WAS FORMED IN HOPES OF PROVIDING FINANCIAL ASSISTANCE TOO LAW ENFORCEMENT OFFICERS AND THEIR FAMILIES IN TIMES OF CRISIS RESULTING FROM DISASTERS, VIOLENCE OR INJURY</p>
+
+        <p><strong>QUESTION: ARE YOU A MEMBER OF THE ORGANIZATION?</strong><br />
+        RESPONSE:NO,I WORK FOR GOOD MERITS INC, A PROFESSIONAL FUNDRAISING COMPANY WHICH HAS BEEN CONTRACTED BY POLICE AND TROOPERS RELIEF FOUNDATION</p>
+
+        <p><strong>WHO IS THE HEAD OF THE ORGANIZATION :</strong><br />
+        RESPONSE:SAM CABRAL IS THE PRESISDENT</p>
+
+        <p><strong>QUESTION: WHAT IS THE TAX STATUS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: THE LAW ENFORCEMENT OFFICERS RELIEF FUND IS A 501(C)(3) YOUR CONTRIBUTION MAY BE TAX DEDUCTIBLE, BUT WE SUGGEST YOU CONSULT YOUR TAX PREPARER</p>
+
+        <p><strong>QUESTION: WHERE IS THE ORGANIZATION LOCATED?</strong><br />
+        RESPONSE: THE POLICE AND TROOPERS RELIEF FOUNDATION IS HEADQUARTERED IN SARASOTA,FLORIDA</p>
+
+        <p><strong>QUESTION: DO THEY HAVE A WEBSITE?</strong><br />
+        RESPONSE: WWW.LEORF.ORG</p>
+
+        <p><strong>QUESTION: HOW MUCH GOES TO THE ORGANIZATION?</strong><br />
+        RESPONSE: A PORTION OF THE GROSS SPONSORSHIP PROCEEDS IS USED TO DEFRAY THE EXPENSES OF PUBLIC EDUCATION, ADMINISTRATION, AND THE COST OF THIS APPEAL. 
+        POLICE AND TROOPERS RELIEF FOUNDATION WILL RETAIN AT LEAST 15% OF GROSS PROCEEDS AFTER EXPENSES</p>
+
+        <p><strong>QUESTION: DOES THIS HELP OUT LOCALLY?</strong><br />
+        RESPONSE:POLICE AND TROOPERS RELIEF FOUNDATION IS A NATION WIDE ORGANIZATION</p>
+
+        <p><strong>QUESTION: WHO DO YOU WORK FOR?</strong><br />
+        RESPONSE:I WORK FOR GOOD MERITS INC HEADQUARTERED AT 8 THE GREEN SUITE 8514 DOVER DE 19901</p>
+        </div>
+      </article>
+      <article class="camp" id="poac">
+        <div class="camp-heading">
+          <h2>POLICE OFFICERS ALLIANCE PAC</h2>
+          <p>Source: poact4t.html | Variants checked: poact4t.html, poact4tinbound.html, poacxtap.html, poacxtapinbound.html</p>
+        </div>
+        <div class="qna">
+<p><strong>QUESTION: IF A QUESTION IS NOT ON HERE?</strong><br />
+        RESPONSE: PLEASE REFER THE CONSUMER TO THE CORRESPONDING "800" NUMBER: </p>
+
+        <p><strong>QUESTION: WHAT IS THE POLICE OFFICERS ALLIANCE PAC</strong><br />
+        RESPONSE: TTHE POLICE OFFICERS ALLIANCE PAC IS A POLITICAL COMMITTEE THAT PUSHES TO GET CANDIDATES ELECTED WHO SUPPORT OUR NATION’S LAW ENFORCEMENT OFFICER AND 
+        HELP ELECT CANDIDATES THAT WILL GIVE THE PROPER ATTENTION TO THE WIDESPREAD ISSUES IN LAW ENFORCEMENT.</p>
+
+        <p><strong>QUESTION: ARE YOU A MEMBER OF THE ORGANIZATION?</strong><br />
+        RESPONSE: NO I WORK A COMPANY HIRED TO CONDUCT THESE CALLS FOR THE ASSOCIATION.</p>
+
+        <p><strong>QUESTION: IS THIS A DEMOCRAT OR REPUBLICAN ORGANIZATION?</strong><br />
+        RESPONSE: THIS ORGANIZATION IS NOT DEMOCRATIC OR REPUBLICAN; IT'S A BIPARTISAN ORGANIZATION FOCUSING ON THE NEEDS OF LAW ENFORCEMENT OFFICERS.</p>
+
+        <p><strong>QUESTION:WHO IS THE HEAD OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: THIS POLITICAL COMMITTEE WAS ORGANIZED AND IS MANAGED BY A GROUP OF CITIZENS CONCERNED WITH THE DETERIORATING SUPPORT FOR EMERGENCY RESPONDERS</p>
+
+        <p><strong>QUESTION: WHAT IS THE TAX STATUS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: THE POLICE OFFICERS ALLIANCE PAC IS A 527 ORGANIZATION UNDER THE IRS TAX CODE. DUE TO ITS PARTICULAR TAX STATUS CONTRIBUTIONS ARE NOT TAX DEDUCTIBLE.</p>
+
+        <p><strong>QUESTION: WHERE IS THE ORGANIZATION LOCATED?</strong><br />
+        RESPONSE: THE POLITICAL COMMITTEE IS LOCATED IN ALEXANDRIA VA</p>
+
+        <p><strong>QUESTION: DO THEY HAVE A WEBSITE?</strong><br />
+        RESPONSE: YOU CAN VISIT THE POLICE OFFICERS ALLIANCE PAC ON THE WEB AT www.policecommittee.org</p>
+
+        <p><strong>QUESTION: HOW MUCH GOES TO THE ORG?</strong><br />
+        RESPONSE: THERE IS NO SET PERCENTAGE. THERE ARE SUBSTANTIAL FUNDRAISING EXPENSES, PROCESSING FEES, AND NORMAL FEC COMPLIANCE EXPENSES. 
+        BUT THE PLAN IS TO HAVE ENOUGH FUNDS LEFT OVER TO SUPPORT THE CANDIDATES WHO WILL TRULY HELP THE CAUSE. 800# 866-310-8282.</p>
+
+        <p><strong>QUESTION: DOES THIS HELP OUT LOCALLY?</strong><br />
+        RESPONSE: THIS IS A NATIONAL PROGRAM.</p>
+
+        <p><strong>QUESTION: WHO DO YOU WORK FOR?</strong><br />
+        RESPONSE: I WORK FOR A PROFESSIONAL FUNDRAISING COMPANY HIRED BY THE PAC.</p>
+        </div>
+      </article>
+      <article class="camp" id="posa">
+        <div class="camp-heading">
+          <h2>POLICE OFFICERS SUPPORT ASSOCIATION PAC</h2>
+          <p>Source: posat4t.html | Variants checked: posat4t.html, posat4tinbound.html, posaxtap.html, posaxtapinbound.html</p>
+        </div>
+        <div class="qna">
+<p><strong>QUESTION: IF A QUESTION IS NOT ON HERE?</strong><br />
+        RESPONSE: PLEASE REFER THE CONSUMER TO THE CORRESPONDING "800" NUMBER: 866-434-3079.</p>
+
+        <p><strong>QUESTION: WHAT IS THE POLICE OFFICERS SUPPORT ASSOCIATION?</strong><br />
+        RESPONSE: THE POLICE OFFICERS SUPPORT ASSOCIATION IS A PROJECT OF A FEDERAL POLITICAL COMMITTEE CALLED LAW ENFORCEMENT FOR A SAFER AMERICA. LAW ENFORCEMENT FOR A SAFER AMERICA PUSHES TO GET CANDIDATES ELECTED WHO SUPPORT EMERGENCY RESPONDERS AND WILL PUSH TO GET LEGISLATION AND POLICY PASSED THAT PROMOTES THE SAFETY OF OUR EMERGENCY RESPONDERS.</p>
+
+        <p><strong>QUESTION: ARE YOU A MEMBER OF THE ORGANIZATION?</strong><br />
+        RESPONSE: NO, I WORK FOR A COMPANY HIRED TO CONDUCT THESE CALLS FOR THE ASSOCIATION.</p>
+
+        <p><strong>QUESTION: IS THIS A DEMOCRAT OR REPUBLICAN ORGANIZATION?</strong><br />
+        RESPONSE: THIS ORGANIZATION IS NOT DEMOCRATIC OR REPUBLICAN; IT'S A BIPARTISAN ORGANIZATION FOCUSING ON THE NEEDS OF LAW ENFORCEMENT OFFICERS.</p>
+
+        <p><strong>QUESTION: WHAT IF I ASK A QUESTION YOU DO NOT KNOW?</strong><br />
+        RESPONSE: YOU KNOW THAT'S A REALLY GOOD QUESTION, AND I DON’T WANT TO GIVE YOU AN INCORRECT RESPONSE. SO INSTEAD, IF YOU WOULD LIKE MORE INFORMATION REGARDING THE DRIVE, I CAN GIVE YOU A NUMBER TO CALL: 866-434-3079.</p>
+
+        <p><strong>QUESTION: WHAT IS THE TAX STATUS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: THE POLICE OFFICERS SUPPORT ASSOCIATION IS A 527 ORGANIZATION UNDER THE IRS TAX CODE. DUE TO ITS PARTICULAR TAX STATUS, CONTRIBUTIONS ARE NOT TAX DEDUCTIBLE.</p>
+
+        <p><strong>QUESTION: WHERE IS THE ORGANIZATION LOCATED?</strong><br />
+        RESPONSE: THE POLITICAL COMMITTEE IS LOCATED IN SARASOTA, FL.</p>
+
+        <p><strong>QUESTION: DO THEY HAVE A WEBSITE?</strong><br />
+        RESPONSE: YOU CAN VISIT THE POLICE OFFICERS SUPPORT ASSOCIATION ON THE WEB AT www.policeofficerssupportassociation.org</p>
+
+        <p><strong>QUESTION: HOW MUCH GOES TO THE POSA?</strong><br />
+        RESPONSE: THERE IS NO SET PERCENTAGE. THERE ARE SUBSTANTIAL FUNDRAISING EXPENSES, PROCESSING FEES, AND NORMAL FEC COMPLIANCE EXPENSES. BUT THE PLAN IS TO HAVE ENOUGH FUNDS LEFT OVER TO SUPPORT THE CANDIDATES WHO WILL TRULY HELP THE CAUSE.</p>
+
+        <p><strong>QUESTION: DOES THIS HELP OUT LOCALLY?</strong><br />
+        RESPONSE: THIS IS A NATIONAL PROGRAM.</p>
+
+        <p><strong>QUESTION: WHO DO YOU WORK FOR?</strong><br />
+        RESPONSE: I WORK FOR A PROFESSIONAL FUNDRAISING COMPANY HIRED BY THE PAC.</p>
+        </div>
+      </article>
+      <article class="camp" id="txcops">
+        <div class="camp-heading">
+          <h2>TEXAS COALITION OF POLICE AND SHERIFFS</h2>
+          <p>Source: txcopst4t.html | Variants checked: txcopst4t.html, txcopst4tinbound.html, txcopsxtapinbound.html, txcopxtap.html</p>
+        </div>
+        <div class="qna">
+<p><strong>QUESTION: IF A QUESTION IS NOT ON HERE?</strong><br />
+        RESPONSE: PLEASE REFER THE CONSUMER TO THE CORRESPONDING "800" NUMBER: 1-866-396-3725.</p>
+
+        <p><strong>QUESTION: WHO IS THE TEXAS COALITION OF POLICE AND SHERIFFS::</strong><br />
+        RESPONSE: THE COALITION OF POLICE AND SHERIFF'S C.O.P.S, LOCAL 911 IS THE FASTEST GROWING NOT-FOR-PROFIT ORGANIZATION FOR LAW ENFORCEMENT PERSONNEL IN THE STATE OF TEXAS. 
+        C.O.P.S LOCAL 911 WAS FORMED TO ANSWER THE CRITICAL NEEDS OF YOUR MOST ESSENTIAL PUBLIC SERVANTS, YOUR LOCAL MUNICIPAL AND COUNTY LAW ENFORCEMENT OFFICERS AND DEPUTIES.</p>
+
+        <p><strong>QUESTION: ARE YOU A MEMBER OF THE ORGANIZATION?</strong><br />
+        RESPONSE:NO,I WORK FOR GOOD MERITS INC, A PROFESSIONAL FUNDRAISING COMPANY WHICH HAS BEEN CONTRACTED BY THE TEXAS COALITION OF POLICE AND SHERIFFS.</p>
+
+
+        <p><strong>QUESTION: WHAT IS THE TAX STATUS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: THE THE TEXAS COALITION OF POLICE AND SHERIFFS IS DESIGNATED BY THE IRS AS A NON-PROFIT POLICE UNION, NOT A CHARITY. YOUR CONTRIBUTION IS NOT TAX DEDUCTIBLE.</p>
+
+        <p><strong>QUESTION: WHERE IS THE ORGANIZATION LOCATED?</strong><br />
+        RESPONSE: THE TEXAS COALITION OF POLICE AND SHERIFFS IS HEADQUARTERED AT 3605 KATY FREEWAY SUITE 103 HOUSTON, TX 77007.</p>
+
+        <p><strong>QUESTION: DO THEY HAVE A WEBSITE?</strong><br />
+        RESPONSE: YOU CAN VISIT THE TEXAS COALITION OF POLICE AND SHERIFFS ON THE WEB AT WWW.COPSWEB.ORG</p>
+
+        <p><strong>QUESTION: HOW MUCH GOES TO THE ORG?</strong><br />
+        RESPONSE: A PORTION OF THE GROSS SPONSORSHIP PROCEEDS IS USED TO DEFRAY THE EXPENSES OF PUBLIC EDUCATION, ADMINISTRATION, AND THE COST OF THIS APPEAL. 
+        THE TEXAS COALITION OF POLICE AND SHERIFFS WILL RETAIN AT LEAST 15% OF GROSS PROCEEDS AFTER EXPENSES
+        </p>
+
+        <p><strong>QUESTION: DOES THIS HELP OUT LOCALLY?</strong><br />
+        RESPONSE: THIS IS A STATE WIDE PROGRAM.</p>
+
+        <p><strong>QUESTION: WHO DO YOU WORK FOR?</strong><br />
+        RESPONSE:I WORK FOR GOOD MERITS INC HEADQUARTERED AT 8 THE GREEN SUITE 8514 DOVER DE 19901</p>
+        </div>
+      </article>
+      <article class="camp" id="txfof">
+        <div class="camp-heading">
+          <h2>TEXAS FALLEN OFFICER FOUNDATION</h2>
+          <p>Source: txfoft4t.html | Variants checked: txfoft4t.html, txfoft4tinbound.html, txfofxtap.html, txfofxtapinbound.html</p>
+        </div>
+        <div class="qna">
+<p><strong>QUESTION: IF A QUESTION IS NOT ON HERE?</strong><br />
+        RESPONSE: PLEASE REFER THE CONSUMER TO THE CORRESPONDING "800" NUMBER: 8664396185.</p>
+
+        <p><strong>QUESTION: WHO IS THE TEXAS FALLEN OFFICER FOUNDATION:</strong><br />
+        RESPONSE: THE TEXAS FALLEN OFFICER FOUNDATION IS A 501C3 ORGANIZATION DEDICATED TO PROVIDING ADVOCACY AND SUPPORT TO FAMILIES OF POLICE OFFICERS KILLED OR INJURED IN THE LINE OF DUTY. 
+        THEIR MISSION IS TO AID THESE FAMILIES BY PROVIDING FINANCIAL ASSISTANCE, ACCESS TO RESOURCES, AND SPECIALIZED PROGRAMS FOR SURIVIVING FAMILY MEMBERS</p>
+
+        <p><strong>QUESTION: ARE YOU A MEMBER OF THE ORGANIZATION?</strong><br />
+        RESPONSE:NO,I WORK FOR GOOD MERITS, A PROFESSIONAL FUNDRAISING COMPANY WHICH HAS BEEN CONTRACTED BY TEXAS FALLEN OFFICER FOUNDATION</p>
+
+
+        <p><strong>QUESTION: WHAT IS THE TAX STATUS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: THE TEXAS FALLEN OFFICER FOUNDATION IS A 501(C)(3) YOUR CONTRIBUTION MAY BE TAX DEDUCTIBLE, BUT WE SUGGEST YOU CONSULT YOUR TAX PREPARER
+        .</p>
+
+        <p><strong>QUESTION: WHERE IS THE ORGANIZATION LOCATED?</strong><br />
+        RESPONSE: THE TEXAS FALLEN OFFICER FOUNDATION IS HEADQUARTERED IN PLANO, TX.</p>
+
+        <p><strong>QUESTION: DO THEY HAVE A WEBSITE?</strong><br />
+        RESPONSE: WWW.TEXASFOF.ORG</p>
+
+        <p><strong>QUESTION: HOW MUCH GOES TO THE ORG?</strong><br />
+        RESPONSE: A PORTION OF THE GROSS SPONSORSHIP PROCEEDS IS USED TO DEFRAY THE EXPENSES OF PUBLIC EDUCATION, ADMINISTRATION, AND THE COST OF THIS APPEAL.
+         TEXAS FALLEN OFFICER FOUNDATION WILL RETAIN AT LEAST 13% OF GROSS PROCEEDS AFTER EXPENSES
+        </p>
+
+        <p><strong>QUESTION: DOES THIS HELP OUT LOCALLY?</strong><br />
+        RESPONSE: THIS IS A STATE WIDE PROGRAM.</p>
+
+        <p><strong>QUESTION: WHO DO YOU WORK FOR?</strong><br />
+        RESPONSE:I WORK FOR GOOD MERITS INC HEADQUARTERED AT 8 THE GREEN SUITE 8514 DOVER DE 19901</p>
+        </div>
+      </article>
+      <article class="camp" id="pava">
+        <div class="camp-heading">
+          <h2>THE POLICE ASSOCIATION OF VIRGINIA</h2>
+          <p>Source: pavat4t.html | Variants checked: pavat4t.html, pavat4tinbound.html, pavaxtap.html, pavaxtapinbound.html</p>
+        </div>
+        <div class="qna">
+<p><strong>QUESTION: IF A QUESTION IS NOT ON HERE?</strong><br />
+        RESPONSE: PLEASE REFER THE CONSUMER TO THE CORRESPONDING "800" NUMBER: 866-572-0713</p>
+
+        <p><strong>QUESTION: WHO IS PAVA:</strong><br />
+        RESPONSE: THE POLICE ASSOCIATION OF VIRGINIA IS A PROFESSIONAL POLICE ORGNIZATION FOUNDED IN 1941. 
+        THEIR MISSION IS TO ENCOURAGE THE COOPERATION OF LAW ENFORCEMENT THROUGOUT THE STATE AND HELP PROVIDE CHARITABLE RELIEF TO THE FAMILIES OF LOCAL AND COUNTY OFFICERS THROUGHOUT VIRGINIA.</p>
+
+        <p><strong>QUESTION: ARE YOU A MEMBER OF THE ORGANIZATION?</strong><br />
+        RESPONSE:NO, I WORK FOR GOOD MERITS INC, A PROFESSIONAL FUNDRAISING COMPANY WHICH HAS BEEN CONTRACTED BY POLICE ASSOCIATION OF VIRGINIA</p>
+        
+        <p><strong>QUESTION: WHO IS THE HEAD OF THIS ORGANIZATION</strong><br />
+            RESPONSE: BRIAN HALLMAN IS THE EXECUTIVE DIRECTOR.
+
+        <p><strong>QUESTION: WHAT IS THE TAX STATUS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: THE PAVA IS A 501C3. YOUR CONTRIBUTION MAYBE TAX DEDUCTIBLE BUT WE SUGGEST YOU CONSULT YOUR TAX PREPARER</p>
+
+        <p><strong>QUESTION: WHERE IS THE ORGANIZATION LOCATED?</strong><br />
+        RESPONSE: THE POLICE ASSOCIATON OF VIRGINIA IS HEADQUARTED IN NORFOLK VIRGINIA</p>
+
+        <p><strong>QUESTION: WHERE IS MY DONATION MAILED TO</strong><br />
+        RESPONSE: ALL DONATION ARE MAILED TO THE STATE CAPITAL IN RICHMOND
+
+        <p><strong>QUESTION: DO THEY HAVE A WEBSITE?</strong><br />
+        RESPONSE: YOU CAN VISIT THE POLICE ASSOCIATION OF VIRGINIA ON THE WEB AT WWW.POLICEASSOCIATIONVA.ORG</p>
+
+        <p><strong>QUESTION: HOW MUCH GOES TO THE ORGANIZATION?</strong><br />
+        RESPONSE: A portion of the gross sponsorship proceeds is used to defray the expenses of public education, administration, and the cost of this appeal. The POLICE ASSOCIATION OF VIRGINIA will retain at least 17% of gross proceeds after expenses.
+        </p>
+
+        <p><strong>QUESTION: DOES THIS HELP OUT LOCALLY?</strong><br />
+        RESPONSE: THIS IS A STATE WIDE PROGRAM.</p>
+
+        <p><strong>QUESTION: WHO DO YOU WORK FOR?</strong><br />
+        RESPONSE:I WORK FOR GOOD MERITS INC HEADQUARTERED AT 8 THE GREEN SUITE 8514 DOVER DE 19901</p>
+        </div>
+      </article>
+      <article class="camp" id="pcny">
+        <div class="camp-heading">
+          <h2>THE POLICE CONFERENCE OF NEW YORK</h2>
+          <p>Source: pcnyt4t.html | Variants checked: pcnyt4t.html, pcnyt4tinbound.html, pcnyxtap.html, pcnyxtapinbound.html</p>
+        </div>
+        <div class="qna">
+<p><strong>QUESTION: IF A QUESTION IS NOT ON HERE?</strong><br />
+        RESPONSE: PLEASE REFER THE CONSUMER TO THE CORRESPONDING "800" NUMBER: 866-614-4108.</p>
+
+        <p><strong>QUESTION:  WHO IS THE PCNY:</strong><br />
+        RESPONSE: THE POLICE CONFERENCE OF NEW YORK IS THE PREEMINENT PROFESSIONAL POLICE UNION IN NY. IT WAS FOUNDED IN 1925 AND REPRESENTS 229 LOCAL PBAS, 8 REGIONAL CONFERENCES, AND ONE RETIRED POLICE ORGANIZATION. THEIR GOAL IS TO PROVIDE LAW ENFORCEMENT TRAINING, PROVIDE CHARITABLE RELIEF TO FAMILIES OF MEMBER OFFICERS, AND PROMOTE SAFER LAWS FOR POLICE OFFICERS AND CITIZENS OF NY..</p>
+
+        <p><strong>QUESTION: ARE YOU A MEMBER OF THE ORGANIZATION?</strong><br />
+        RESPONSE:NO,I WORK FOR GOOD MERITS INC, A PROFESSIONAL FUNDRAISING COMPANY WHICH HAS BEEN CONTRACTED BY THE POLICE CONFERENCE OF NEW YORK.</p>
+
+        <p><strong>QUESTION: WHO IS THE HEAD OF THE ORGANIZATION?</strong><br />
+        RESPONSE: RICHARD WELLS IS THE PRESIDENT
+
+        <p><strong>QUESTION: WHAT IS THE TAX STATUS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: ALTHOUGH THE ORGANIZATION IS A NON PROFIT YOUR DONATION IS NOT TAX DEDUCTIBLE BECAUSE THEY ARE A POLICE UNION.</p>
+
+        <p><strong>QUESTION: WHERE IS THE ORGANIZATION LOCATED?</strong><br />
+        RESPONSE: THE PCNY IS LOCATED IN ALBANY NY.</p>
+
+        <p><strong>QUESTION: DO THEY HAVE A WEBSITE?</strong><br />
+        RESPONSE:  YOU CAN VISIT THE POLICE CONFERENCE ON THE WEB AT WWW.PCNY.ORG</p>
+
+        <p><strong>QUESTION: HOW MUCH GOES TO THE ORG?</strong><br />
+        RESPONSE: A PORTION OF THE GROSS SPONSORSHIP PROCEEDS IS USED TO DEFRAY THE EXPENSES OF PUBLIC EDUCATION ADMINISTRATION AND THE COST OF THIS APPEAL. THE POLICE CONFERENCE OF NEW YORK WILL RETAIN AT LEAST 15% OF GROSS PROCEEDS AFTER EXPENSES
+        </p>
+
+        <p><strong>QUESTION: DOES THIS HELP OUT LOCALLY?</strong><br />
+        RESPONSE: THIS IS A STATE WIDE PROGRAM.</p>
+
+        <p><strong>QUESTION: WHO DO YOU WORK FOR?</strong><br />
+        RESPONSE:I WORK FOR GOOD MERITS INC HEADQUARTERED AT 8 THE GREEN SUITE 8514 DOVER DE 19901</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="category" id="veterans">
+      <h1>Veterans</h1>
+      <article class="camp" id="nyamvets">
+        <div class="camp-heading">
+          <h2>AMERICAN VETERANS DEPARTMENT OF NEW YORK</h2>
+          <p>Source: nyamvetst4t.html | Variants checked: nyamvetst4t.html, nyamvetst4tinbound.html, nyamvetsxtap.html, nyamvetsxtapinbound.html</p>
+        </div>
+        <div class="qna">
+<p><strong>QUESTION: IF A QUESTION IS NOT ON HERE?</strong><br />
+        RESPONSE: PLEASE REFER THE CONSUMER TO THE CORRESPONDING "800" NUMBER: 8665138781.</p>
+
+        <p><strong>WHO ARE THE NYAMVETS</strong><br />
+        RESPONSE: THE AMVETS WAS CHARTERED BY AN ACT OF CONGRESS UNDER PUBLIC LAW 216. PRESIDENT HARRY S. TRUMAN SIGNED THE CHARTER JULY 23,1947. THE NYAMVETS WAS FORMED BY WWII VETERANS, THE GOAL IS TO PROVIDE SERVICE TO AMERICA'S VETERANS,FAMILIES AND COMMUNITIES IN NEW YORK</p>
+
+        <p><strong>QUESTION: ARE YOU A MEMBER OF THE ORGANIZATION?</strong><br />
+        RESPONSE: NO, I WORK FOR GOOD MERITS INC. A PROFESSIONAL FUNDRAISING COMPANY WHICH HAS BEEN CONTRACTED BY THE NYAMVETS</p>
+
+        <p><strong>QUESTION: WHO IS THE HEAD OF THE ORGANIZATION</strong><br />
+        RESPONSE:RICHARD ROSSI IS THE EXECUTIVE DIRECTOR
+         
+
+        <p><strong>QUESTION: WHAT IS THE TAX STATUS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: THE NYAMVETS IS A 501(C)19 NON PROFIT. YOUR DONATION IS NOT TAX DEDUCTIBLE FOR MORE INFORMATION PLEASE CONSULT YOUR TAX PREPARER</p>
+
+        <p><strong>QUESTION: WHERE IS THE ORGANIZATION LOCATED?</strong><br />
+        RESPONSE: THE NYAMVETS IS LOCATED WANTAGH, NY</p>
+
+        <p><strong>QUESTION: DO THEY HAVE A WEBSITE?</strong><br />
+        RESPONSE: WWW.NYAMVETS.ORG</p>
+
+        <p><strong>QUESTION: HOW MUCH GOES TO THE ORGANIZATION?</strong><br />
+        RESPONSE: A PORTION OF THE GROSS SPONSORSHIP PROCEEDS IS USED TO DEFRAY THE EXPENSES OF PUBLIC EDUCATION ADMINISTRATION, 
+        AND THE COST OF THIS APPEAL. NYAMVETS WILL RETAIN AT LEAST 15% OF GROSS PROCEEDS AFTER EXPENSES</p>
+
+        <p><strong>QUESTION: DOES THIS HELP OUT LOCALLY?</strong><br />
+        RESPONSE:THIS IS A STATEWIDE DRIVE.</p>
+
+        <p><strong>QUESTION: WHO DO YOU WORK FOR?</strong><br />
+        RESPONSE:I WORK FOR GOOD MERITS INC HEADQUARTERED AT 8 THE GREEN SUITE 8514 DOVER DE 19901</p>
+        </div>
+      </article>
+      <article class="camp" id="avsc">
+        <div class="camp-heading">
+          <h2>AMERICAN VETERANS SUPPORT COMMITTEE PAC</h2>
+          <p>Source: avsct4t.html | Variants checked: avsct4t.html, avsct4tinbound.html, avscxtap.html, avscxtapinbound.html</p>
+        </div>
+        <div class="qna">
+<p><strong>QUESTION: IF A QUESTION IS NOT ON HERE?</strong><br />
+        RESPONSE: PLEASE REFER THE CONSUMER TO THE CORRESPONDING "800" NUMBER: 800-352-6038</p>
+
+        <p><strong>WHAT IS THE AMERICAN VETERANS SUPPORT COMMITTEE PAC?</strong><br />
+        RESPONSE: THE AMERICAN VETERANS SUPPORT COMMITTEE PAC IS A POLITICAL ORGANIZATION THAT PUSHES TO GET MORE VETERANS ELECTED TO CONGRESS. 
+        THESE CANDIDATES WILL HELP PROMOTE LEGISLATION TO EXPAND THE VA PROGRAM TO INLCUDE MORE EMERGENCY MEDICAL SERVICES AND HOUSING TO OUR HOMELESS AND DISABLED VETERANS.</p>
+
+        <p><strong>QUESTION: ARE YOU A MEMBER OF THE ORGANIZATION?</strong><br />
+        RESPONSE:NO, I WORK FOR A PROFESSIONAL FUNDRAISING COMPANY WHICH HAS BEEN CONTRACTED BY THE AMERICAN ALLIANCE FOR MILITARY VETERANS PAC TO HELP.</p>
+
+        <p><strong>QUESTION: IS THIS A DEMOCRAT OR REPUBLICAN ORGANIZATION?</strong><br />
+        RESPONSE: THIS ORGANIZATION IS NOT DEMOCRATIC OR REPUBLICAN; IT IS A NON PARTISAN POLITICAL ORGANIZATION FOCUSING ON THE NEEDS OF OUR VETERANS.
+
+        <p><strong>QUESTION: WHO IS THE HEAD OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: THIS POLITICAL ORGANIZATION WAS ORGANIZED AND IS MANAGED BY A GROUP OF CITIZENS CONCERNED WITH THE NUMBER OF VETERANS IN CONGRESS
+
+
+        <p><strong>QUESTION: WHAT IS THE TAX STATUS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: CONTRIBUTIONS AND DONATIONS TO THE AMERICAN VETERANS SUPPORT COMMITTEE PAC ARE NOT CHARITABLE CONTRIBUTIONS AND ARE NOT DEDUCTIBLE AS CHARITABLE CONTRIBUTIONS FOR STATE AND FEDERAL INCOME TAX PURPOSES</p>
+
+        <p><strong>QUESTION: WHERE IS THE ORGANIZATION LOCATED?</strong><br />
+        RESPONSE: AMERICAN ALLIANCE FOR MILITARY VETERANS PAC IS LOCATED IN HAMPTON, VIRGINIA..</p>
+
+        <p><strong>QUESTION: DO THEY HAVE A WEBSITE?</strong><br />
+        RESPONSE: YOU CAN VISIT THE AMERICAN ALLIANCE FOR MILITARY VETERANS PAC ON THE WEB AT www.americanveteranspac.org</p>
+
+        <p><strong>QUESTION: HOW MUCH GOES TO THE ORGANIZATION?</strong><br />
+        RESPONSE: THERE IS NO SET PERCENTAGE. THERE ARE SUBSTANTIAL FUNDRAISING EXPENSES, PROCESSING FEES, AND NORMAL FEC COMPLIANCE EXPENSES. BUT THE PLAN IS TO HAVE ENOUGH FUNDS LEFT OVER TO SUPPORT THE CANDIDATES WHO WILL TRULY HELP THE CAUSE..</p>
+
+        <p><strong>QUESTION: DOES THIS HELP OUT LOCALLY?</strong><br />
+        RESPONSE:THIS IS A NATIONAL DRIVE.</p>
+
+        <p><strong>QUESTION: WHO DO YOU WORK FOR?</strong><br />
+        RESPONSE:I WORK FOR A PROFESSIONAL FUNDRAISING COMPANY HIRED BY THE PAC TO CONDUCT THIS DONOR AWARENESS APPEAL.</p>
+        </div>
+      </article>
+      <article class="camp" id="hscdipac">
+        <div class="camp-heading">
+          <h2>HANDICAPPED VETERANS SERVICE INITIATIVE PAC</h2>
+          <p>Source: hscdipact4t.html | Variants checked: hscdipact4t.html, hscdipact4tinbound.html, hscdipacxtap.html, hscdipacxtapinbound.html</p>
+        </div>
+        <div class="qna">
+<p><strong>QUESTION: IF A QUESTION IS NOT ON HERE?</strong><br />
+        RESPONSE: PLEASE REFER THE CONSUMER TO THE CORRESPONDING "800" NUMBER: 18338252677</p>
+
+        <p><strong>WHAT IS THE HANDICAPPED VETERANS SERVICE INITIATIVE PAC</strong><br />
+         RESPONSE: THE HANDICAPPED VETERANS SERVICE INITIATIVE PAC IS A POLITICAL ORGANIZATION THAT PUSHES TO GET 
+         CANDIDATES ELECTED THAT SUPPORT TREATMENT FOR POST TRAMAUTIC STRESS DISORDER FOR OUR VETERANS</p>
+
+        <p><strong>QUESTION: ARE YOU A MEMBER OF THE ORGANIZATION?</strong><br />
+        RESPONSE:NO, I WORK FOR A PROFESSIONAL FUNDRAISING COMPANY WHICH HAS BEEN CONTRACTED BY THE PAC.</p>
+
+        <p><strong>QUESTION: IS THIS A DEMOCRAT OR REPUBLICAN ORGANIZATION?</strong><br />
+        RESPONSE: THIS ORGANIZATION IS NOT DEMOCRATIC OR REPUBLICAN; IT IS A NON PARTISAN POLITICAL ORGANIZATION FOCUSING ON THE NEEDS OF OUR VETERANS.
+
+
+        <p><strong>QUESTION: WHAT IS THE TAX STATUS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: CONTRIBUTIONS AND DONATIONS TO THE HANDICAPPED VETERANS SERVICE INITIATIVE PACARE NOT CHARITABLE CONTRIBUTIONS AND ARE NOT DEDUCTIBLE AS CHARITABLE CONTRIBUTIONS FOR STATE AND FEDERAL INCOME TAX PURPOSES.</p>
+
+        <p><strong>QUESTION: WHERE IS THE ORGANIZATION LOCATED?</strong><br />
+        RESPONSE: HANDICAPPED VETERANS SERVICE INITIATIVE PAC IS LOCATED IN CHICAGO, IL..</p>
+
+        <p><strong>QUESTION: DO THEY HAVE A WEBSITE?</strong><br />
+        RESPONSE: YOU CAN VISIT THE HANDICAPPED VETERANS SERVICE INITIATIVE PAC ON THE WEB AT WWW.VETSK9.COM</p>
+
+        <p><strong>QUESTION: HOW MUCH GOES TO THE ORGANIZATION?</strong><br />
+        RESPONSE: THERE IS NO SET PERCENTAGE. THERE ARE SUBSTANTIAL FUNDRAISING EXPENSES, PROCESSING FEES, AND NORMAL FEC COMPLIANCE EXPENSES. BUT THE PLAN IS TO HAVE ENOUGH FUNDS LEFT OVER TO SUPPORT THE CANDIDATES WHO WILL TRULY HELP THE CAUSE.</p>
+
+        <p><strong>QUESTION: DOES THIS HELP OUT LOCALLY?</strong><br />
+        RESPONSE:THIS IS A NATIONAL DRIVE.</p>
+
+        <p><strong>QUESTION: WHO DO YOU WORK FOR?</strong><br />
+        RESPONSE:I WORK FOR A PROFESSIONAL FUNDRAISING COMPANY HIRED BY THE PAC TO CONDUCT THIS DONOR AWARENESS APPEAL.</p>
+        </div>
+      </article>
+      <article class="camp" id="ncdv">
+        <div class="camp-heading">
+          <h2>NATIONAL COALITION FOR DISABLED VETERANS PAC</h2>
+          <p>Source: ncdvt4t.html | Variants checked: ncdvt4t.html, ncdvt4tinbound.html, ncdvxtap.html, ncdvxtapinbound.html</p>
+        </div>
+        <div class="qna">
+<p><strong>QUESTION: IF A QUESTION IS NOT ON HERE?</strong><br />
+        RESPONSE: PLEASE REFER THE CONSUMER TO THE CORRESPONDING "800" NUMBER: 866-827-8884</p>
+
+        <p><strong>WHAT IS THE NATIONAL COALITION FOR DISABLED VETERANS PAC</strong><br />
+        RESPONSE: THE NATIONAL COALITION FOR DISABLED VETERANS PAC IS A POLITICAL ORGANIZATION THAT PUSHES TO GET MORE VETERANS ELECTED TO CONGRESS. THESE CANDIDATES WILL HELP PROMOTE LEGISLATION TO EXPAND THE VA PROGRAM TO INLCUDE MORE EMERGENCY AND URGENT CARE CENTERS AND SUPPORT LEGISLATION TO REMOVE COOPAYMENTS ON CERTAIN MEDICATIONS FOR OUR VETERANS..</p>
+
+        <p><strong>QUESTION: ARE YOU A MEMBER OF THE ORGANIZATION?</strong><br />
+        RESPONSE:NO, I WORK FOR A PROFESSIONAL FUNDRAISING COMPANY WHICH HAS BEEN CONTRACTED BY THE PAC.</p>
+
+        <p><strong>QUESTION: WHAT IS THE TAX STATUS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: CONTRIBUTIONS AND DONATIONS TO THE NATIONAL COALITION FOR DISABLED VETERANS PAC ARE NOT CHARITABLE CONTRIBUTIONS AND ARE NOT DEDUCTIBLE AS CHARITABLE CONTRIBUTIONS FOR STATE AND FEDERAL INCOME TAX PURPOSES.</p>
+
+        <p><strong>QUESTION: WHERE IS THE ORGANIZATION LOCATED?</strong><br />
+        RESPONSE: NATIONAL COALITION FOR DISABLED VETERANS PAC IS LOCATED IN CHICAGO, IL.</p>
+
+        <p><strong>QUESTION: DO THEY HAVE A WEBSITE?</strong><br />
+        RESPONSE: YOU CAN VISIT THE NATIONAL COALITION FOR DISABLED VETERANS PAC ON THE WEB AT WWW.DISABLEDVETSPAC.COM</p>
+
+        <p><strong>QUESTION: HOW MUCH GOES TO THE ORGANIZATION?</strong><br />
+        RESPONSE: THERE IS NO SET PERCENTAGE.  THERE ARE SUBSTANTIAL FUNDRAISING EXPENSES, PROCESSING FEES, AND NORMAL FEC COMPLIANCE EXPENSES.  BUT THE PLAN IS TO HAVE ENOUGH FUNDS LEFT OVER TO SUPPORT THE CANDIDATES WHO WILL TRULY HELP THE CAUSE.</p>
+
+        <p><strong>QUESTION: DOES THIS HELP OUT LOCALLY?</strong><br />
+        RESPONSE:THIS IS A NATIONAL DRIVE.</p>
+
+        <p><strong>QUESTION: WHO DO YOU WORK FOR?</strong><br />
+        RESPONSE:I WORK FOR A PROFESSIONAL FUNDRAISING COMPANY HIRED BY THE PAC TO CONDUCT THIS DONOR AWARENESS APPEAL.</p>
+        </div>
+      </article>
+      <article class="camp" id="unvet">
+        <div class="camp-heading">
+          <h2>THE UNITED VETERANS OF AMERICA PAC</h2>
+          <p>Source: unvett4t.html | Variants checked: unvett4t.html, unvett4tinbound.html, unvetxtap.html, unvetxtapinbound.html</p>
+        </div>
+        <div class="qna">
+<p><strong>QUESTION: IF A QUESTION IS NOT ON HERE?</strong><br />
+        RESPONSE: PLEASE REFER THE CONSUMER TO THE CORRESPONDING "800" NUMBER: 18666090556</p>
+
+        <p><strong>WHO IS THE UNVETPAC:</strong><br />
+        RESPONSE: THE UNITED VETERANS OF AMERICA PAC IS POLITICAL COMMITTEE THAT SUPPORTS LEGISLATORS THAT ADVOCATE FOR THE NEEDS OF OUR NATIONS VETERANS AND WILL HELP TO ADVANCE EMERGENCY HEALTHCARE AND HOUSING FOR OUR HOMELESS AND DISABLED VETERANS.</p>
+
+        <p><strong>QUESTION: ARE YOU A MEMBER OF THE ORGANIZATION?</strong><br />
+        RESPONSE:NO, I WORK FOR A PROFESSIONAL FUNDRAISING COMPANY WHICH HAS BEEN CONTRACTED BY THE PAC.</p>
+
+        <p><strong>IS THIS A DEMOCRAT OR REPUBLICAN ORGANIZATION?</strong><br />
+        RESPONSE:THIS ORGANIZATION IS NOT DEMOCRATIC OR REPUBLICAN; IT'S A BIPARTISAN ORGANIZATION FOCUSING ON THE NEEDS OF LAW ENFORCEMENT OFFICERS.</p>
+
+        <p><strong>QUESTION: WHAT IS THE TAX STATUS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: THE UNITED VETERANS OF AMERICA PAC IS A 527 ORGANIZATION UNDER THE IRS TAX CODE. DUE TO ITS PARTICULAR TAX STATUS, CONTRIBUTIONS ARE NOT TAX DEDUCTIBLE.</p>
+
+        <p><strong>QUESTION: WHERE IS THE ORGANIZATION LOCATED?</strong><br />
+        RESPONSE: THE UNITED VETERANS OF AMERICA PAC  IS HEADQUARTERED IN HAMPTON VA..</p>
+
+        <p><strong>QUESTION: DO THEY HAVE A WEBSITE?</strong><br />
+        RESPONSE: YOU CAN VISIT THE UNITED VETERANS OF AMERICA PAC ON THE WEB AT www.unitedveteranspac.org</p>
+
+        <p><strong>QUESTION: HOW MUCH GOES TO THE ORGANIZATION?</strong><br />
+        RESPONSE: HERE IS NO SET PERCENTAGE. THERE ARE SUBSTANTIAL FUNDRAISING EXPENSES, PROCESSING FEES, AND NORMAL FEC COMPLIANCE EXPENSES. BUT THE PLAN IS TO HAVE ENOUGH FUNDS LEFT OVER TO SUPPORT THE CANDIDATES WHO WILL TRULY HELP THE CAUSE.</p>
+
+        <p><strong>QUESTION: DOES THIS HELP OUT LOCALLY?</strong><br />
+        RESPONSE:THIS IS A NATIONAL DRIVE.</p>
+
+        <p><strong>QUESTION: WHO DO YOU WORK FOR?</strong><br />
+        RESPONSE:I WORK FOR A PROFESSIONAL FUNDRAISING COMPANY HIRED BY THE PAC TO CONDUCT THIS DONOR AWARENESS APPEAL.</p>
+        </div>
+      </article>
+      <article class="camp" id="vaf">
+        <div class="camp-heading">
+          <h2>VETERANS ASSISTANCE ACTION FUND PAC</h2>
+          <p>Source: vaft4t.html | Variants checked: vaft4t.html, vaft4tinbound.html, vafxtap.html, vafxtapinbound.html</p>
+        </div>
+        <div class="qna">
+<p><strong>QUESTION: IF A QUESTION IS NOT ON HERE?</strong><br />
+        RESPONSE: PLEASE REFER THE CONSUMER TO THE CORRESPONDING "800" NUMBER: 8885837587</p>
+
+        <p><strong>WHAT IS THE VETERANS ASSISTANCE ACTION FUND PAC?</strong><br />
+        RESPONSE: THE VETERANS ASSISTANCE ACTION FUND PAC IS A POLITICAL ORGANIZATION THAT PUSHES TO 
+        GET MORE LEADERS ELECTED THAT WILL STAND UP FOR OUR NATIONS VETERANS BY INCREASING PROGRAMS THAT HELP WITH PTSD, DISPLACEMENT AND MEDICAL NEEDS</p>
+
+        <p><strong>QUESTION: ARE YOU AN MEMBER OF THE VETERANS ASSISTANCE ACTION FUND PAC?</strong><br />
+        RESPONSE:NO, I WORK FOR A PROFESSIONAL FUNDRAISING COMPANY WHICH HAS BEEN CONTRACTED BY THE AMERICAN ALLIANCE FOR MILITARY VETERANS PAC TO HELP.</p>
+
+        <p><strong>QUESTION: IS THIS A DEMOCRAT OR REPUBLICAN ORGANIZATION?</strong><br />
+        RESPONSE: THIS ORGANIZATION IS NOT DEMOCRATIC OR REPUBLICAN; IT IS A NON PARTISAN POLITICAL ORGANIZATION FOCUSING ON THE NEEDS OF OUR VETERANS.
+
+        <p><strong>QUESTION: WHO IS THE HEAD OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: THIS POLITICAL ORGANIZATION WAS ORGANIZED AND IS MANAGED BY A GROUP OF CITIZENS CONCERNED WITH THE NUMBER OF VETERANS IN CONGRESS
+
+
+        <p><strong>QUESTION: WHAT IS THE TAX STATUS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: CONTRIBUTIONS AND DONATIONS TO THE VETERANS ASSISTANCE ACTION FUND PAC ARE NOT CHARITABLE CONTRIBUTIONS AND ARE NOT DEDUCTIBLE AS CHARITABLE CONTRIBUTIONS FOR STATE AND FEDERAL INCOME TAX PURPOSES.</p>
+
+        <p><strong>QUESTION: WHERE IS THE ORGANIZATION LOCATED?</strong><br />
+        RESPONSE: THE VETERANS ASSISTANCE ACTION FUND PAC IS HEADQUARTERED IN CHICAGO, IL.</p>
+
+        <p><strong>QUESTION: DO THEY HAVE A WEBSITE?</strong><br />
+        RESPONSE: YOU CAN VISIT THE VETERANS ASSISTANCE ACTION FUND PAC ON THE WEB AT WWW.VETERANSASSISTANCEPAC.ORG</p>
+
+        <p><strong>QUESTION: HOW MUCH GOES TO THE ORGANIZATION?</strong><br />
+        RESPONSE: THERE IS NO SET PERCENTAGE. THERE ARE SUBSTANTIAL FUNDRAISING EXPENSES, PROCESSING FEES, AND NORMAL FEC COMPLIANCE EXPENSES. BUT THE PLAN IS TO HAVE ENOUGH FUNDS LEFT OVER TO SUPPORT THE CANDIDATES WHO WILL TRULY HELP THE CAUSE..</p>
+
+        <p><strong>QUESTION: DOES THIS HELP OUT LOCALLY?</strong><br />
+        RESPONSE:THIS IS A NATIONAL DRIVE.</p>
+
+        <p><strong>QUESTION: WHO DO YOU WORK FOR?</strong><br />
+        RESPONSE:I WORK FOR A PROFESSIONAL FUNDRAISING COMPANY HIRED BY THE PAC TO CONDUCT THIS DONOR AWARENESS APPEAL.</p>
+        </div>
+      </article>
+      <article class="camp" id="vaa">
+        <div class="camp-heading">
+          <h2>VETERANS ASSOCIATION OF AMERICA</h2>
+          <p>Source: vaat4t.html | Variants checked: vaat4t.html, vaat4tinbound.html, vaaxtap.html, vaaxtapinbound.html</p>
+        </div>
+        <div class="qna">
+<p><strong>QUESTION: IF A QUESTION IS NOT ON HERE?</strong><br />
+        RESPONSE: PLEASE REFER THE CONSUMER TO THE CORRESPONDING "800" NUMBER: 8665138781.</p>
+
+        <p><strong>WHAT IS THE VAA</strong><br />
+        RESPONSE: Veterans Association of America, Inc. is an organization that provides legal assistance, housing, employment opportunities, business ownership, discharge upgrades, medical assistance, family outreach, and other pressing issues that stand as debilitating factors preventing veterans and their families from receiving the “quality care” deserved throughout mainstream society.</p>
+
+        <p><strong>QUESTION: ARE YOU A MEMBER OF THE ORGANIZATION?</strong><br />
+        RESPONSE:NO, I WORK FOR GOOD MERITS INC. A PROFESSIONAL FUNDRAISING COMPANY WHICH HAS BEEN CONTRACTED BY THE VAA</p>
+
+
+        <p><strong>QUESTION: WHAT IS THE TAX STATUS OF THIS ORGANIZATION?</strong><br />
+        RESPONSE: THE VAA IS A 501(C)3 NON PROFIT. YOUR DONATION MAY BE TAX DEDUCTIBLE FOR MORE INFORMATION PLEASE CONSULT YOUR TAX PREPARER</p>
+
+        <p><strong>QUESTION: WHERE IS THE ORGANIZATION LOCATED?</strong><br />
+        RESPONSE: THE VAA IS LOCATED NEW YORK, NY</p>
+
+        <p><strong>QUESTION: DO THEY HAVE A WEBSITE?</strong><br />
+        RESPONSE: WWW.VETSAA.ORG</p>
+
+        <p><strong>QUESTION: HOW MUCH GOES TO THE ORGANIZATION?</strong><br />
+        RESPONSE: A PORTION OF THE GROSS SPONSORSHIP PROCEEDS IS USED TO DEFRAY THE EXPENSES OF PUBLIC EDUCATION ADMINISTRATION, AND THE COST OF THIS APPEAL. VAA WILL RETAIN AT LEAST 15% OF GROSS PROCEEDS AFTER EXPENSES.</p>
+
+        <p><strong>QUESTION: DOES THIS HELP OUT LOCALLY?</strong><br />
+        RESPONSE:THIS IS A NATIONAL DRIVE.</p>
+
+        <p><strong>QUESTION: WHO DO YOU WORK FOR?</strong><br />
+        RESPONSE:I WORK FOR GOOD MERITS INC HEADQUARTERED AT 8 THE GREEN SUITE 8514 DOVER DE 19901</p>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
