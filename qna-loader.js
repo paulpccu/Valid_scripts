@@ -31,6 +31,11 @@
         "file":  "vfaqna.html"
     },
     {
+        "id":  "voffsc",
+        "title":  "VOLUNTEER FIREFIGHTERS SUPPORT COMMITTEE PAC",
+        "file":  "voffscqna.html"
+    },
+    {
         "id":  "acps",
         "title":  "COALITION FOR POLICE AND SHERIFFS PAC",
         "file":  "acpsqna.html"
