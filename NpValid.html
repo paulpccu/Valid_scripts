@@ -3,21 +3,162 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Taps Validation</title>
+  <title>NPS Validation</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
+    body {
+      margin: 20px;
+      color: #111;
+      background: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+    }
 
+    .box {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+      background: #fff;
+    }
+
+    .header {
+      margin-bottom: 12px;
+      padding: 7px 10px;
+      border-radius: 4px;
+      color: #fff;
+      background: #e46868;
+      font-weight: 700;
+    }
+
+    .instruction {
+      display: block;
+      margin: 12px 0;
+      padding: 9px 10px;
+      background: #fff3a3;
+      font-weight: 700;
+    }
+
+    .authorization {
+      margin: 12px 0;
+      padding: 10px;
+      border-left: 4px solid #d9544d;
+      background: #f8d2d2;
+    }
+
+    .success {
+      margin: 12px 0;
+      padding: 10px;
+      background: #d6f5d6;
+    }
+
+    .upsale {
+      margin: 12px 0;
+      padding: 12px;
+      border: 1px solid #d1b83f;
+      border-radius: 4px;
+      background: #fff8c9;
+    }
+
+    .upsale h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+    }
+
+    .amount {
+      font-weight: 700;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @media (max-width: 700px) {
+      body {
+        margin: 10px;
+      }
+
+      .box {
+        padding: 12px;
+      }
+    }
+  </style>
 </head>
-
 <body>
-    <h2><span style="background-color: rosybrown;font-weight: bold;">ROUST SCRIPT</span></h2>
-    Hello! this is (your name) and you have been transfered to the processing line. I am ready for your card number and expiration date whenever you are.
-    <blockquote>
-        <span style="background-color: yellow;">GET CC NUMBER AND EXPERATION</span>
-    </blockquote>
-    <section class="campaign-qna-box" id="campaign-qna-box">
-        <div class="campaign-qna-title">CAMPAIGN Q&amp;A</div>
-        <div id="campaign-qna-content">Loading campaign Q&amp;A...</div>
-    </section>
-    <script src="vicidial-params.js"></script>
-    <script src="qna-loader.js?v=20260610-voffsc"></script>
+  <section class="box">
+    <div class="header">NPS / ROUST VALIDATION</div>
+
+    <p>
+      Hello! This is <b>(your full name)</b> and you have been transferred to the processing line.
+      I am ready for your card number and expiration date whenever you are.
+    </p>
+
+    <span class="instruction">GET CARD NUMBER, EXPIRATION DATE, AND NAME ON CARD.</span>
+
+    <div id="current-amount-flow" class="hidden">
+      <p>
+        And <b id="current-donor-name"></b>, do you authorize
+        <b id="current-list-description"></b> to process your card one time for
+        <b id="current-amount"></b>?
+      </p>
+    </div>
+
+    <div id="original-pledge-flow" class="hidden">
+      <p>
+        And <b id="original-donor-name"></b>, unfortunately, due to circumstances they have yet
+        to reach their goal. We are asking the best supporters if they can contribute at one of
+        the hero levels this year.
+      </p>
+      <p>
+        Original pledge: <b id="original-pledge-amount"></b>
+      </p>
+    </div>
+
+    <div class="upsale">
+      <h3>UPSALE</h3>
+      <div id="nps-upsale-text">Loading the correct upsale...</div>
+    </div>
+
+    <div id="hero-authorization" class="authorization hidden">
+      <b>IF YES:</b>
+      Thank you so much. That will go a long way toward helping them meet the goal.
+      Do you authorize <b id="hero-list-description"></b> to process your card one time
+      for the selected donation amount?
+      <br /><br />
+      <b>IF NO:</b>
+      No problem at all, I completely understand. Do you authorize
+      <b id="original-list-description"></b> to process your card one time for the original
+      pledge amount of <b id="original-authorization-amount"></b>?
+    </div>
+
+    <div class="success">
+      <b>AFTER PROCESSING:</b><br />
+      Thank you so much for honoring your pledge. Is the address on file:
+      <b id="full-address"></b> still correct?
+      <br />
+      <b>Make sure you have the correct apartment or unit number.</b>
+    </div>
+
+    <div class="authorization">
+      <b>IF THE CARD DOES NOT PROCESS:</b><br />
+      My apologies, can you please read your card number again?
+      If it still does not process, ask whether another card is available.
+    </div>
+
+    <span class="instruction">
+      IF THIS IS A PAC, READ THE REQUIRED PAC DISCLOSURE BEFORE ENDING THE CALL.
+    </span>
+  </section>
+
+  <section class="campaign-qna-box" id="campaign-qna-box">
+    <div class="campaign-qna-title">CAMPAIGN Q&amp;A</div>
+    <div id="campaign-qna-content">Loading campaign Q&amp;A...</div>
+  </section>
+
+  <script src="nps-loader.js?v=20260610-nps"></script>
+  <script src="qna-loader.js?v=20260610-nps"></script>
 </body>
+</html>
