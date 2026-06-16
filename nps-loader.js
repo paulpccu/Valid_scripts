@@ -90,8 +90,9 @@
       "listdescription"
     ]) || "(organization name)";
     const currentAmount = parseAmount(firstValue(params, ["amount", "province"]));
-    const comments = firstValue(params, ["comments"]);
-    const originalPledge = parseAmount(comments);
+    const originalPledgeRaw = firstValue(params, ["security_phrase"]) ||
+      firstValue(params, ["comments"]);
+    const originalPledge = parseAmount(originalPledgeRaw);
     const address = [
       firstValue(params, ["address", "address1"]),
       firstValue(params, ["city"]),
@@ -129,10 +130,10 @@
         formatMoney(levels[2]) +
         ". What is best for you, one time for the drive?";
     } else {
-      setText("original-pledge-amount", comments || "Not provided");
-      setText("original-authorization-amount", comments || "(original pledge amount)");
+      setText("original-pledge-amount", originalPledgeRaw || "Not provided");
+      setText("original-authorization-amount", originalPledgeRaw || "(original pledge amount)");
       upsaleElement.textContent =
-        "No numeric pledge amount was found in province or comments. Confirm the original pledge before presenting an upsale.";
+        "No numeric pledge amount was found in province or security phrase. Confirm the original pledge before presenting an upsale.";
     }
   }
 
