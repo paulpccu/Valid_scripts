@@ -91,6 +91,11 @@
         "file":  "pnoaqna.html"
     },
     {
+        "id":  "padv",
+        "title":  "POLICE ADVOCACY COMMITTEE PAC",
+        "file":  "padvqna.html"
+    },
+    {
         "id":  "pssa",
         "title":  "POLICE AND SHERIFFS SUPPORT ALLIANCE PAC",
         "file":  "pssaqna.html"
