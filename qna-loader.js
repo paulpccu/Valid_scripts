@@ -304,6 +304,21 @@
       ".campaign-qna-content p {",
       "  margin: 10px 0;",
       "}",
+      ".pac-disclosure {",
+      "  margin-top: 16px;",
+      "  padding: 12px 14px;",
+      "  border: 2px solid #111;",
+      "  border-radius: 4px;",
+      "  background: #fff8cc;",
+      "  color: #111;",
+      "}",
+      ".pac-disclosure-title {",
+      "  font-weight: bold;",
+      "  margin-bottom: 6px;",
+      "}",
+      ".pac-disclosure p {",
+      "  margin: 0;",
+      "}",
       ".campaign-qna-status {",
       "  color: #555;",
       "  font-style: italic;",
@@ -322,6 +337,54 @@
       escapeHtml(message) +
       ' <a href="all-camp-qna.html" target="_blank" rel="noopener">Open the master Q&amp;A</a>.' +
       '</p>';
+  }
+
+  function stripHtml(html) {
+    return String(html || "")
+      .replace(/<br\s*\/?>/gi, " ")
+      .replace(/<[^>]*>/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function getCampaignWebsite(html) {
+    const text = stripHtml(html);
+    const websitePatterns = [
+      /ON THE WEB AT\s+((?:https?:\/\/)?(?:www\.)?[a-z0-9.-]+\.[a-z]{2,}(?:\/[^\s]*)?)/i,
+      /WEBSITE(?:\s+IS|:)?\s+((?:https?:\/\/)?(?:www\.)?[a-z0-9.-]+\.[a-z]{2,}(?:\/[^\s]*)?)/i,
+      /RESPONSE:\s+((?:https?:\/\/)?(?:www\.)?[a-z0-9.-]+\.[a-z]{2,}(?:\/[^\s]*)?)/i
+    ];
+
+    for (const pattern of websitePatterns) {
+      const match = text.match(pattern);
+      if (match && match[1]) return match[1].replace(/[.,;:]+$/, "");
+    }
+
+    return "";
+  }
+
+  function isPacCampaign(campaign) {
+    return /\bPAC\b/i.test(campaign.title);
+  }
+
+  function getPacDisclosure(campaign, qnaHtml) {
+    if (!isPacCampaign(campaign)) return "";
+
+    const website = getCampaignWebsite(qnaHtml);
+    const websiteText = website ? ", THE WEBSITE IS " + website : "";
+
+    return [
+      '<div class="pac-disclosure" id="pac-disclosure">',
+      '<div class="pac-disclosure-title">PAC DISCLOSURE</div>',
+      '<p>',
+      'GIFTS OR DONATIONS ARE NOT TAX-DEDUCTIBLE AND CONTRIBUTIONS SHALL BE USED EXCLUSIVELY FOR GRASSROOTS POLITICAL PURPOSES. ',
+      'THIS CALL HAS BEEN PAID FOR BY ',
+      escapeHtml(campaign.title),
+      escapeHtml(websiteText),
+      " AND IS NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'S COMMITTEE. THANKS, BYE-BYE.",
+      '</p>',
+      '</div>'
+    ].join("");
   }
 
   async function loadCampaignQna() {
@@ -346,7 +409,8 @@
     try {
       const response = await fetch("qna/" + campaign.file, { cache: "no-store" });
       if (!response.ok) throw new Error("HTTP " + response.status);
-      target.innerHTML = await response.text();
+      const qnaHtml = await response.text();
+      target.innerHTML = getPacDisclosure(campaign, qnaHtml) + qnaHtml;
     } catch (error) {
       setMasterQnaStatus(target, "Unable to load Q&A for " + campaign.title + ".");
       console.error("Campaign Q&A load failed:", error);
