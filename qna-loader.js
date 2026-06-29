@@ -208,6 +208,14 @@
     ]
   };
 
+  const pacCampaignIds = new Set([
+    "cpod",
+    "ffsa",
+    "mifpac",
+    "nerc",
+    "npsf"
+  ]);
+
   function normalize(value) {
     return String(value || "")
       .toUpperCase()
@@ -363,15 +371,16 @@
     return "";
   }
 
-  function isPacCampaign(campaign) {
-    return /\bPAC\b/i.test(campaign.title);
+  function isPacCampaign(campaign, listDescription) {
+    return pacCampaignIds.has(campaign.id) || /\bPAC\b/i.test(campaign.title) || /\bPAC\b/i.test(listDescription);
   }
 
-  function getPacDisclosure(campaign, qnaHtml) {
-    if (!isPacCampaign(campaign)) return "";
+  function getPacDisclosure(campaign, listDescription, qnaHtml) {
+    if (!isPacCampaign(campaign, listDescription)) return "";
 
     const website = getCampaignWebsite(qnaHtml);
     const websiteText = website ? ", THE WEBSITE IS " + website : "";
+    const disclosureName = /\bPAC\b/i.test(listDescription) ? listDescription : campaign.title;
 
     return [
       '<div class="pac-disclosure" id="pac-disclosure">',
@@ -379,7 +388,7 @@
       '<p>',
       'GIFTS OR DONATIONS ARE NOT TAX-DEDUCTIBLE AND CONTRIBUTIONS SHALL BE USED EXCLUSIVELY FOR GRASSROOTS POLITICAL PURPOSES. ',
       'THIS CALL HAS BEEN PAID FOR BY ',
-      escapeHtml(campaign.title),
+      escapeHtml(disclosureName),
       escapeHtml(websiteText),
       " AND IS NOT AUTHORIZED BY ANY CANDIDATE OR CANDIDATE'S COMMITTEE. THANKS, BYE-BYE.",
       '</p>',
@@ -410,7 +419,7 @@
       const response = await fetch("qna/" + campaign.file, { cache: "no-store" });
       if (!response.ok) throw new Error("HTTP " + response.status);
       const qnaHtml = await response.text();
-      target.innerHTML = getPacDisclosure(campaign, qnaHtml) + qnaHtml;
+      target.innerHTML = getPacDisclosure(campaign, listDescription, qnaHtml) + qnaHtml;
     } catch (error) {
       setMasterQnaStatus(target, "Unable to load Q&A for " + campaign.title + ".");
       console.error("Campaign Q&A load failed:", error);
