@@ -146,6 +146,11 @@
         "file":  "avscqna.html"
     },
     {
+        "id":  "chdv",
+        "title":  "COALITION FOR HOMELESS AND DISABLED VETERANS PAC",
+        "file":  "chdvqna.html"
+    },
+    {
         "id":  "hscdipac",
         "title":  "HANDICAPPED VETERANS SERVICE INITIATIVE PAC",
         "file":  "hscdipacqna.html"
@@ -187,6 +192,10 @@
     ],
     afc: [
       "AMERICAN FIREFIGHTERS COALTION PAC"
+    ],
+    chdv: [
+      "CHDV",
+      "CHDV PAC"
     ],
     dare: [
       "DARE"
