@@ -111,6 +111,11 @@
         "file":  "poacqna.html"
     },
     {
+        "id":  "poacom",
+        "title":  "POLICE OFFICERS ACTION COMMITTEE PAC",
+        "file":  "poacomqna.html"
+    },
+    {
         "id":  "posa",
         "title":  "POLICE OFFICERS SUPPORT ASSOCIATION PAC",
         "file":  "posaqna.html"
@@ -208,6 +213,10 @@
     ],
     nyamvets: [
       "NEW YORK AMVETS"
+    ],
+    poacom: [
+      "POACOM",
+      "POACOM PAC"
     ],
     posa: [
       "POLICE OFFICERS SUPPORT ALLIANCE PAC"
