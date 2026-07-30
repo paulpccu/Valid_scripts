@@ -6,6 +6,11 @@
         "file":  "afcqna.html"
     },
     {
+        "id":  "cfpff",
+        "title":  "COALITION FOR PARAMEDICS AND FIREFIGHTERS PAC",
+        "file":  "cfpffqna.html"
+    },
+    {
         "id":  "cpft",
         "title":  "COMMITTEE FOR PARAMEDICS AND FIREFIGHTERS PAC",
         "file":  "cpftqna.html"
