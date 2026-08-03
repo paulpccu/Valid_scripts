@@ -121,6 +121,11 @@
         "file":  "poacomqna.html"
     },
     {
+        "id":  "posc",
+        "title":  "POLICE OFFICERS SUPPORT COMMITTEE PAC",
+        "file":  "poscqna.html"
+    },
+    {
         "id":  "posa",
         "title":  "POLICE OFFICERS SUPPORT ASSOCIATION PAC",
         "file":  "posaqna.html"
@@ -222,6 +227,10 @@
     poacom: [
       "POACOM",
       "POACOM PAC"
+    ],
+    posc: [
+      "POSC",
+      "POSC PAC"
     ],
     posa: [
       "POLICE OFFICERS SUPPORT ALLIANCE PAC"
