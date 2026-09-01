@@ -229,7 +229,8 @@
       "POACOM PAC"
     ],
     posc: [
-      "POSC",
+      "POSC", 
+      "POLICE OFFICER SUPPORT COMMITTEE PAC",
       "POSC PAC"
     ],
     posa: [
